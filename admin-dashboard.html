@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Stackly</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme dashboard-body">
+    <div class="dashboard-wrapper fade-in-section">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+                <a href="index.html" class="logo" style="margin-bottom: 0;">
+                    <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
+                </a>
+                <button id="sidebar-toggle-btn" aria-label="Toggle Sidebar" style="color: var(--text-primary); border: none; background: transparent; cursor: pointer; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; padding: 0.5rem; outline: none;">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="404.html" class="sidebar-link active" data-panel="panel-overview"><i class="fa-solid fa-chart-pie"></i> Overview</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-projects"><i class="fa-solid fa-layer-group"></i> Projects</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-clients"><i class="fa-solid fa-users"></i> Clients</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-finances"><i class="fa-solid fa-file-invoice-dollar"></i> Finances</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-users"><i class="fa-solid fa-user-shield"></i> User Management</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile-sm">
+                    <div class="user-avatar">A</div>
+                    <div class="user-info">
+                        <h4>Admin Panel</h4>
+                        <p id="user-display-email" style="font-size: 0.8rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 140px;" title="Studio Director">Studio Director</p>
+                    </div>
+                </div>
+                <a href="login.html" class="icon-btn" style="width: 35px; height: 35px;" aria-label="Logout"><i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 0.9rem;"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="dashboard-header-title" style="display: flex; align-items: center; gap: 1rem;">
+                    <button id="mobile-sidebar-toggle-btn" class="mobile-only" aria-label="Toggle Sidebar" style="border: none; background: transparent; cursor: pointer; font-size: 1.5rem; color: var(--text-primary); padding: 0 0.5rem 0 0; display: flex; align-items: center; justify-content: center; outline: none;">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <h2 class="mobile-only" style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Admin Overview</h2>
+                </div>
+                <div class="dashboard-header-actions" style="display: flex; align-items: center; gap: 1.25rem;">
+                    <div class="icon-btn desktop-only" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="icon-btn" aria-label="Notifications" style="position: relative;">
+                        <i class="fa-regular fa-bell" style="font-size: 1.2rem;"></i>
+                        <span class="badge" style="position: absolute; top: -2px; right: -2px; background: #ef4444; color: white; border-radius: 50%; width: 16px; height: 16px; font-size: 0.65rem; display: flex; justify-content: center; align-items: center; font-weight: bold; border: 2px solid var(--bg-secondary);">3</span>
+                    </div>
+                    <button class="btn btn-primary desktop-only" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">
+                        <i class="fa-solid fa-plus"></i> New Project
+                    </button>
+                </div>
+            </header>
+
+            <!-- Panel: Overview -->
+            <div id="panel-overview" class="dashboard-panel active">
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                
+                <!-- KPI Metrics -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fa-solid fa-building"></i></div>
+                        <div class="metric-info">
+                            <p>Active Projects</p>
+                            <h3>12</h3>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+                        <div class="metric-info">
+                            <p>Monthly Revenue</p>
+                            <h3>$184k</h3>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div class="metric-info">
+                            <p>Pending Consults</p>
+                            <h3>5</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Consultations Table -->
+                <section class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h3 class="dashboard-section-title">Recent Inquiries</h3>
+                        <a href="404.html" style="color: var(--accent); font-size: 0.9rem;">View All</a>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Client Name</th>
+                                    <th>Service Type</th>
+                                    <th>Date Received</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Sarah Jenkins</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">sarah.j@email.com</span></td>
+                                    <td>Residential Architecture</td>
+                                    <td>Today, 10:45 AM</td>
+                                    <td><span class="status-badge status-pending">Needs Review</span></td>
+                                    <td><button class="icon-btn" style="width: 35px; height: 35px;"><i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Michael Chang</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">m.chang@corporate.com</span></td>
+                                    <td>Commercial Interior</td>
+                                    <td>Yesterday, 2:15 PM</td>
+                                    <td><span class="status-badge status-active">Contacted</span></td>
+                                    <td><button class="icon-btn" style="width: 35px; height: 35px;"><i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Project Timeline -->
+                <section class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h3 class="dashboard-section-title">Project Timeline</h3>
+                        <div class="icon-btn"><i class="fa-solid fa-filter"></i></div>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <!-- Project 1 -->
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; color: var(--text-primary);">Obsidian Living Space</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">Client: Emily Robertson</p>
+                                </div>
+                                <span class="status-badge status-active">Rendering Phase</span>
+                            </div>
+                            <div class="progress-bar-bg" style="height: 6px; margin-bottom: 0.5rem;">
+                                <div class="progress-bar-fill" style="width: 65%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                <span>Concept</span>
+                                <span>Renders</span>
+                                <span>Procurement</span>
+                                <span>Build</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; color: var(--text-primary);">Biophilic Office Lounge</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">Client: Nexus Corp</p>
+                                </div>
+                                <span class="status-badge status-pending">Procurement</span>
+                            </div>
+                            <div class="progress-bar-bg" style="height: 6px; margin-bottom: 0.5rem;">
+                                <div class="progress-bar-fill" style="width: 85%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                <span>Concept</span>
+                                <span>Renders</span>
+                                <span style="color: var(--accent);">Procurement</span>
+                                <span>Build</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            </div>
+
+            <!-- Panel: Projects -->
+            <div id="panel-projects" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header"><div class="dashboard-header-title"><h2>Projects</h2></div></header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    
+                    <!-- Projects Top Bar -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+                        <div style="display: flex; gap: 1rem;">
+                            <div class="glass-card" style="padding: 0.75rem 1.25rem; text-align: center; border-radius: 8px;">
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.25rem;">Total Projects</p>
+                                <h4 style="color: var(--text-primary); font-size: 1.2rem;">24</h4>
+                            </div>
+                            <div class="glass-card" style="padding: 0.75rem 1.25rem; text-align: center; border-radius: 8px;">
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.25rem;">Active</p>
+                                <h4 style="color: var(--accent); font-size: 1.2rem;">8</h4>
+                            </div>
+                            <div class="glass-card" style="padding: 0.75rem 1.25rem; text-align: center; border-radius: 8px;">
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.25rem;">Completed</p>
+                                <h4 style="color: #32c896; font-size: 1.2rem;">16</h4>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="position: relative;">
+                                <i class="fa-solid fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                                <input type="text" class="input-field" placeholder="Search projects..." style="padding-left: 2.5rem; width: 250px;">
+                            </div>
+                            <select class="input-field" style="width: auto;">
+                                <option>All Statuses</option>
+                                <option>Active</option>
+                                <option>Planning</option>
+                                <option>Procurement</option>
+                                <option>Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;">
+                        <!-- Card 1 -->
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.25rem;">Modern Minimalist Villa</h3>
+                                    <p style="color: var(--text-muted); font-size: 0.85rem;">Client: Sarah Jenkins</p>
+                                </div>
+                                <span class="status-badge status-active">Active</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Full interior redesign and custom furniture procurement for a 4-bedroom villa.</p>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">
+                                    <span>Progress</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="progress-bar-bg" style="height: 6px;">
+                                    <div class="progress-bar-fill" style="width: 65%;"></div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                <div style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> Due: Nov 12</div>
+                                <a href="404.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 500;">View Details <i class="fa-solid fa-arrow-right" style="margin-left: 0.25rem;"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.25rem;">Biophilic Office Lounge</h3>
+                                    <p style="color: var(--text-muted); font-size: 0.85rem;">Client: Nexus Corp</p>
+                                </div>
+                                <span class="status-badge status-pending">Procurement</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Corporate lounge area integrating natural elements and sustainable materials.</p>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">
+                                    <span>Progress</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar-bg" style="height: 6px;">
+                                    <div class="progress-bar-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                <div style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> Due: Oct 28</div>
+                                <a href="404.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 500;">View Details <i class="fa-solid fa-arrow-right" style="margin-left: 0.25rem;"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.25rem;">Downtown Loft Renovation</h3>
+                                    <p style="color: var(--text-muted); font-size: 0.85rem;">Client: Alex Rivera</p>
+                                </div>
+                                <span class="status-badge status-pending" style="background: rgba(200, 150, 50, 0.2); color: #c89632;">Planning</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Industrial style loft space conversion, focusing on maximizing natural light.</p>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">
+                                    <span>Progress</span>
+                                    <span>20%</span>
+                                </div>
+                                <div class="progress-bar-bg" style="height: 6px;">
+                                    <div class="progress-bar-fill" style="width: 20%;"></div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                <div style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> Due: Feb 15</div>
+                                <a href="404.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 500;">View Details <i class="fa-solid fa-arrow-right" style="margin-left: 0.25rem;"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="glass-card" style="padding: 1.5rem; opacity: 0.7;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.25rem;">Suburban Family Home</h3>
+                                    <p style="color: var(--text-muted); font-size: 0.85rem;">Client: The Millers</p>
+                                </div>
+                                <span class="status-badge status-completed">Completed</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Complete furnishings and decor package for a new construction 5-bedroom home.</p>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">
+                                    <span>Progress</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="progress-bar-bg" style="height: 6px;">
+                                    <div class="progress-bar-fill" style="width: 100%; background: #32c896;"></div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                <div style="font-size: 0.85rem; color: #32c896;"><i class="fa-solid fa-check"></i> Delivered Sep 05</div>
+                                <a href="404.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 500;">View Details <i class="fa-solid fa-arrow-right" style="margin-left: 0.25rem;"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Create New Card -->
+                        <div class="glass-card" style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 1px dashed var(--border-color); background: rgba(255,255,255,0.01); cursor: pointer; min-height: 250px; transition: border-color var(--transition-fast);">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(197, 168, 128, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <h3 style="color: var(--text-primary); font-size: 1.1rem;">Create New Project</h3>
+                            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">Start a new client engagement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Clients -->
+            <div id="panel-clients" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header"><div class="dashboard-header-title"><h2>Clients</h2></div></header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    
+                    <!-- Clients Top Bar -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+                        <div style="display: flex; gap: 1rem;">
+                            <div class="glass-card" style="padding: 0.75rem 1.25rem; text-align: center; border-radius: 8px;">
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.25rem;">Total Clients</p>
+                                <h4 style="color: var(--text-primary); font-size: 1.2rem;">42</h4>
+                            </div>
+                            <div class="glass-card" style="padding: 0.75rem 1.25rem; text-align: center; border-radius: 8px;">
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.25rem;">Active</p>
+                                <h4 style="color: var(--accent); font-size: 1.2rem;">8</h4>
+                            </div>
+                            <div class="glass-card" style="padding: 0.75rem 1.25rem; text-align: center; border-radius: 8px;">
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.25rem;">New Leads</p>
+                                <h4 style="color: #3296fa; font-size: 1.2rem;">5</h4>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="position: relative;">
+                                <i class="fa-solid fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                                <input type="text" class="input-field" placeholder="Search clients..." style="padding-left: 2.5rem; width: 250px;">
+                            </div>
+                            <button class="btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;"><i class="fa-solid fa-plus"></i> Add Client</button>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 1.5rem; align-items: start;">
+                        <!-- Client Directory Table -->
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <h3 style="color: var(--text-primary); margin-bottom: 1.5rem;">Client Directory</h3>
+                            <div style="overflow-x: auto;">
+                                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                                    <thead>
+                                        <tr style="border-bottom: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                                            <th style="padding: 1rem 0; font-weight: 500;">Client</th>
+                                            <th style="padding: 1rem 0; font-weight: 500;">Contact</th>
+                                            <th style="padding: 1rem 0; font-weight: 500;">Status</th>
+                                            <th style="padding: 1rem 0; font-weight: 500;">Last Activity</th>
+                                            <th style="padding: 1rem 0; text-align: right; font-weight: 500;">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                            <td style="padding: 1rem 0; color: var(--text-primary);">
+                                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                    <div class="user-avatar" style="width: 32px; height: 32px; font-size: 0.8rem; background: rgba(197, 168, 128, 0.2); color: var(--accent);">SJ</div>
+                                                    <div>
+                                                        <div style="font-weight: 500;">Sarah Jenkins</div>
+                                                        <div style="font-size: 0.75rem; color: var(--text-muted);">Modern Minimalist Villa</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.9rem;">
+                                                <div>sarah.j@example.com</div>
+                                                <div style="font-size: 0.75rem; color: var(--text-muted);">+1 (555) 123-4567</div>
+                                            </td>
+                                            <td style="padding: 1rem 0;"><span class="status-badge status-active">Active</span></td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.85rem;">2 hours ago</td>
+                                            <td style="padding: 1rem 0; text-align: right;"><a href="404.html" class="icon-btn" style="width: 32px; height: 32px; font-size: 0.8rem;"><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                            <td style="padding: 1rem 0; color: var(--text-primary);">
+                                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                    <div class="user-avatar" style="width: 32px; height: 32px; font-size: 0.8rem; background: rgba(50, 200, 150, 0.2); color: #32c896;">NC</div>
+                                                    <div>
+                                                        <div style="font-weight: 500;">Nexus Corp</div>
+                                                        <div style="font-size: 0.75rem; color: var(--text-muted);">Biophilic Office Lounge</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.9rem;">
+                                                <div>contact@nexus.com</div>
+                                                <div style="font-size: 0.75rem; color: var(--text-muted);">+1 (555) 987-6543</div>
+                                            </td>
+                                            <td style="padding: 1rem 0;"><span class="status-badge status-pending">Procurement</span></td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.85rem;">Yesterday</td>
+                                            <td style="padding: 1rem 0; text-align: right;"><a href="404.html" class="icon-btn" style="width: 32px; height: 32px; font-size: 0.8rem;"><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                            <td style="padding: 1rem 0; color: var(--text-primary);">
+                                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                    <div class="user-avatar" style="width: 32px; height: 32px; font-size: 0.8rem; background: rgba(50, 150, 250, 0.2); color: #3296fa;">AR</div>
+                                                    <div>
+                                                        <div style="font-weight: 500;">Alex Rivera</div>
+                                                        <div style="font-size: 0.75rem; color: var(--text-muted);">Downtown Loft Renovation</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.9rem;">
+                                                <div>alex.r@example.com</div>
+                                                <div style="font-size: 0.75rem; color: var(--text-muted);">+1 (555) 456-7890</div>
+                                            </td>
+                                            <td style="padding: 1rem 0;"><span class="status-badge status-pending" style="background: rgba(200, 150, 50, 0.2); color: #c89632;">Planning</span></td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.85rem;">Oct 12, 2026</td>
+                                            <td style="padding: 1rem 0; text-align: right;"><a href="404.html" class="icon-btn" style="width: 32px; height: 32px; font-size: 0.8rem;"><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 1rem 0; color: var(--text-primary);">
+                                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                    <div class="user-avatar" style="width: 32px; height: 32px; font-size: 0.8rem; background: rgba(255, 255, 255, 0.1); color: var(--text-secondary);">TM</div>
+                                                    <div>
+                                                        <div style="font-weight: 500;">The Millers</div>
+                                                        <div style="font-size: 0.75rem; color: var(--text-muted);">Suburban Family Home</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.9rem;">
+                                                <div>millers@example.com</div>
+                                                <div style="font-size: 0.75rem; color: var(--text-muted);">+1 (555) 222-3333</div>
+                                            </td>
+                                            <td style="padding: 1rem 0;"><span class="status-badge status-completed">Completed</span></td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.85rem;">Sep 05, 2026</td>
+                                            <td style="padding: 1rem 0; text-align: right;"><a href="404.html" class="icon-btn" style="width: 32px; height: 32px; font-size: 0.8rem;"><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- New Leads Sidebar -->
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                <h3 style="color: var(--text-primary); font-size: 1.1rem;">New Leads</h3>
+                                <span style="background: rgba(50, 150, 250, 0.2); color: #3296fa; padding: 0.1rem 0.5rem; border-radius: 12px; font-size: 0.75rem;">5 New</span>
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                        <h4 style="color: var(--text-primary); font-size: 0.95rem;">David Chen</h4>
+                                        <span style="color: var(--text-muted); font-size: 0.75rem;">2h ago</span>
+                                    </div>
+                                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;">Interested in full home remodel. Budget: $150k+</p>
+                                    <a href="404.html" style="color: var(--accent); text-decoration: none; font-size: 0.8rem; font-weight: 500;">Review Inquiry</a>
+                                </div>
+                                <div style="padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                        <h4 style="color: var(--text-primary); font-size: 0.95rem;">Emma Watson</h4>
+                                        <span style="color: var(--text-muted); font-size: 0.75rem;">1d ago</span>
+                                    </div>
+                                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;">Looking for eco-friendly kitchen design materials.</p>
+                                    <a href="404.html" style="color: var(--accent); text-decoration: none; font-size: 0.8rem; font-weight: 500;">Review Inquiry</a>
+                                </div>
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                        <h4 style="color: var(--text-primary); font-size: 0.95rem;">Vanguard Retail</h4>
+                                        <span style="color: var(--text-muted); font-size: 0.75rem;">2d ago</span>
+                                    </div>
+                                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;">Commercial boutique space. Needs consultation.</p>
+                                    <a href="404.html" style="color: var(--accent); text-decoration: none; font-size: 0.8rem; font-weight: 500;">Review Inquiry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Finances -->
+            <div id="panel-finances" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header">
+                    <div class="dashboard-header-title"><h2>Financial Overview</h2></div>
+                    <div class="header-actions">
+                        <button class="btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;"><i class="fa-solid fa-plus"></i> Create Invoice</button>
+                    </div>
+                </header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    
+                    <!-- Finance Stats Bar -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">Total Revenue</p>
+                                <div style="color: #32c896; font-size: 0.8rem; background: rgba(50, 200, 150, 0.15); padding: 0.2rem 0.5rem; border-radius: 4px;">+12.5%</div>
+                            </div>
+                            <h3 style="color: var(--text-primary); font-size: 2rem; font-weight: 300;">$124,500<span style="font-size: 1rem; color: var(--text-muted); margin-left: 0.25rem;">YTD</span></h3>
+                        </div>
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">Outstanding Invoices</p>
+                                <div style="color: #ffb432; font-size: 0.8rem; background: rgba(255, 180, 50, 0.15); padding: 0.2rem 0.5rem; border-radius: 4px;">4 Pending</div>
+                            </div>
+                            <h3 style="color: var(--accent); font-size: 2rem; font-weight: 300;">$18,200</h3>
+                        </div>
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">Total Expenses</p>
+                                <div style="color: #ff6464; font-size: 0.8rem; background: rgba(255, 100, 100, 0.15); padding: 0.2rem 0.5rem; border-radius: 4px;">-4.2%</div>
+                            </div>
+                            <h3 style="color: var(--text-primary); font-size: 2rem; font-weight: 300;">$42,800</h3>
+                        </div>
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">Net Profit</p>
+                            </div>
+                            <h3 style="color: #3296fa; font-size: 2rem; font-weight: 300;">$81,700</h3>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; align-items: start;">
+                        <!-- Recent Invoices Table -->
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                <h3 style="color: var(--text-primary); font-size: 1.1rem;">Recent Invoices</h3>
+                                <a href="404.html" style="color: var(--accent); text-decoration: none; font-size: 0.85rem;">View All</a>
+                            </div>
+                            <div style="overflow-x: auto;">
+                                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                                    <thead>
+                                        <tr style="border-bottom: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                                            <th style="padding: 1rem 0; font-weight: 500;">Invoice ID</th>
+                                            <th style="padding: 1rem 0; font-weight: 500;">Client</th>
+                                            <th style="padding: 1rem 0; font-weight: 500;">Date</th>
+                                            <th style="padding: 1rem 0; font-weight: 500;">Amount</th>
+                                            <th style="padding: 1rem 0; font-weight: 500;">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                            <td style="padding: 1rem 0; color: var(--text-primary); font-weight: 500;">#INV-2026-089</td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary);">Nexus Corp</td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.9rem;">Oct 15, 2026</td>
+                                            <td style="padding: 1rem 0; color: var(--text-primary); font-weight: 500;">$12,500.00</td>
+                                            <td style="padding: 1rem 0;"><span class="status-badge status-pending">Pending</span></td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                            <td style="padding: 1rem 0; color: var(--text-primary); font-weight: 500;">#INV-2026-088</td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary);">Sarah Jenkins</td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.9rem;">Oct 12, 2026</td>
+                                            <td style="padding: 1rem 0; color: var(--text-primary); font-weight: 500;">$4,200.00</td>
+                                            <td style="padding: 1rem 0;"><span class="status-badge status-completed">Paid</span></td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                            <td style="padding: 1rem 0; color: var(--text-primary); font-weight: 500;">#INV-2026-087</td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary);">Alex Rivera</td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.9rem;">Oct 08, 2026</td>
+                                            <td style="padding: 1rem 0; color: var(--text-primary); font-weight: 500;">$8,000.00</td>
+                                            <td style="padding: 1rem 0;"><span class="status-badge status-pending" style="background: rgba(255, 100, 100, 0.2); color: #ff6464;">Overdue</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 1rem 0; color: var(--text-primary); font-weight: 500;">#INV-2026-086</td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary);">The Millers</td>
+                                            <td style="padding: 1rem 0; color: var(--text-secondary); font-size: 0.9rem;">Sep 25, 2026</td>
+                                            <td style="padding: 1rem 0; color: var(--text-primary); font-weight: 500;">$22,000.00</td>
+                                            <td style="padding: 1rem 0;"><span class="status-badge status-completed">Paid</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions & Expenses -->
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <!-- Cash Flow Chart Placeholder -->
+                            <div class="glass-card" style="padding: 1.5rem;">
+                                <h3 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 1rem;">Cash Flow</h3>
+                                <div style="height: 150px; display: flex; align-items: flex-end; justify-content: space-between; gap: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                                    <div style="width: 15%; height: 40%; background: var(--accent); border-radius: 4px 4px 0 0; opacity: 0.6;"></div>
+                                    <div style="width: 15%; height: 60%; background: var(--accent); border-radius: 4px 4px 0 0; opacity: 0.8;"></div>
+                                    <div style="width: 15%; height: 50%; background: var(--accent); border-radius: 4px 4px 0 0; opacity: 0.7;"></div>
+                                    <div style="width: 15%; height: 80%; background: var(--accent); border-radius: 4px 4px 0 0; opacity: 0.9;"></div>
+                                    <div style="width: 15%; height: 100%; background: var(--accent); border-radius: 4px 4px 0 0;"></div>
+                                    <div style="width: 15%; height: 70%; background: var(--accent); border-radius: 4px 4px 0 0; opacity: 0.8;"></div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; color: var(--text-muted); font-size: 0.75rem;">
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                    <span>Jul</span>
+                                    <span>Aug</span>
+                                    <span>Sep</span>
+                                    <span>Oct</span>
+                                </div>
+                            </div>
+
+                            <!-- Recent Expenses -->
+                            <div class="glass-card" style="padding: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                    <h3 style="color: var(--text-primary); font-size: 1.1rem;">Recent Expenses</h3>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(255, 255, 255, 0.05); color: var(--text-secondary); display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-couch"></i></div>
+                                            <div>
+                                                <p style="color: var(--text-primary); font-size: 0.9rem;">West Elm Sourcing</p>
+                                                <p style="color: var(--text-muted); font-size: 0.75rem;">Materials</p>
+                                            </div>
+                                        </div>
+                                        <span style="color: var(--text-primary); font-weight: 500;">-$2,450.00</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(255, 255, 255, 0.05); color: var(--text-secondary); display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-laptop-code"></i></div>
+                                            <div>
+                                                <p style="color: var(--text-primary); font-size: 0.9rem;">AutoCAD License</p>
+                                                <p style="color: var(--text-muted); font-size: 0.75rem;">Software</p>
+                                            </div>
+                                        </div>
+                                        <span style="color: var(--text-primary); font-weight: 500;">-$280.00</span>
+                                    </div>
+                                    <button style="width: 100%; margin-top: 0.5rem; padding: 0.75rem; background: rgba(255,255,255,0.05); border: 1px dashed var(--border-color); color: var(--text-secondary); border-radius: 8px; cursor: pointer; transition: all 0.3s ease;">
+                                        + Log New Expense
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: User Management -->
+            <div id="panel-users" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header" style="flex-direction: column; align-items: flex-start;">
+                    <div class="dashboard-header-title"><h2>User Management</h2></div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Manage platform users, roles, and permissions.</p>
+                </header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                            <h3 style="color: var(--text-primary); font-size: 1.1rem;">All Users</h3>
+                            <div style="display: flex; gap: 1rem; align-items: stretch;">
+                                <input type="text" class="input-field" placeholder="Search users..." style="background: rgba(255,255,255,0.02); width: 200px; padding: 0.5rem 1rem;">
+                                <select class="input-field" style="background: rgba(255,255,255,0.02); width: 120px; padding: 0.5rem 1rem;">
+                                    <option>All Roles</option>
+                                    <option>Admin</option>
+                                    <option>Customer</option>
+                                </select>
+                                <button class="btn-primary" style="background: #a8f0cc; color: #000; border: none; padding: 0.5rem 1rem; font-weight: 500; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1; border-radius: 6px; box-shadow: 0 0 10px rgba(168,240,204,0.3);">
+                                    <span style="font-size: 1rem;">+</span>
+                                    <span>Add</span>
+                                    <span>User</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Table -->
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                                <thead>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); font-size: 0.8rem;">
+                                        <th style="padding: 1rem 0; font-weight: 400;">User</th>
+                                        <th style="padding: 1rem 0; font-weight: 400;">Role</th>
+                                        <th style="padding: 1rem 0; font-weight: 400;">Status</th>
+                                        <th style="padding: 1rem 0; font-weight: 400;">Last Login</th>
+                                        <th style="padding: 1rem 0; font-weight: 400;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                        <td style="padding: 1.25rem 0;">
+                                            <div style="color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">Alice Wonderland</div>
+                                            <div style="color: var(--text-muted); font-size: 0.8rem;">alice@example.com</div>
+                                        </td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary); font-size: 0.9rem;">Admin</td>
+                                        <td style="padding: 1.25rem 0;">
+                                            <span style="background: rgba(50, 200, 150, 0.1); color: #32c896; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Active</span>
+                                        </td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary); font-size: 0.9rem;">Just now</td>
+                                        <td style="padding: 1.25rem 0;"><a href="404.html" style="color: #a8f0cc; text-decoration: none; font-size: 0.85rem;">Edit</a></td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                        <td style="padding: 1.25rem 0;">
+                                            <div style="color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">Bob Builder</div>
+                                            <div style="color: var(--text-muted); font-size: 0.8rem;">bob@example.com</div>
+                                        </td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary); font-size: 0.9rem;">Customer</td>
+                                        <td style="padding: 1.25rem 0;">
+                                            <span style="background: rgba(50, 200, 150, 0.1); color: #32c896; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Active</span>
+                                        </td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary); font-size: 0.9rem;">2 hours ago</td>
+                                        <td style="padding: 1.25rem 0;"><a href="404.html" style="color: #a8f0cc; text-decoration: none; font-size: 0.85rem;">Edit</a></td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                        <td style="padding: 1.25rem 0;">
+                                            <div style="color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">Charlie Chaplin</div>
+                                            <div style="color: var(--text-muted); font-size: 0.8rem;">charlie@example.com</div>
+                                        </td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary); font-size: 0.9rem;">Customer</td>
+                                        <td style="padding: 1.25rem 0;">
+                                            <span style="background: rgba(255, 100, 100, 0.1); color: #ff6464; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Suspended</span>
+                                        </td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary); font-size: 0.9rem;">3 days ago</td>
+                                        <td style="padding: 1.25rem 0;"><a href="404.html" style="color: #a8f0cc; text-decoration: none; font-size: 0.85rem;">Edit</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Settings -->
+            <div id="panel-settings" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header"><div class="dashboard-header-title"><h2>Settings</h2></div></header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    <div class="glass-card" style="padding: 2rem; max-width: 600px;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1.5rem;">Profile Settings</h3>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Full Name</label>
+                            <input type="text" class="input-field" value="Admin User" style="width: 100%;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Email Address</label>
+                            <input type="email" class="input-field" value="admin@stackly.com" style="width: 100%;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Theme Preference</label>
+                            <select class="input-field" style="width: 100%;">
+                                <option>Dark Theme</option>
+                                <option>Light Theme</option>
+                                <option>System Default</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary" style="padding: 0.75rem 1.5rem;">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

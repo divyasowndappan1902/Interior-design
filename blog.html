@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Interiar Design Journal</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Page Loader Animation -->
+    <div id="loader" class="loader-container">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-page="home">Home</a>
+                <a href="about.html" class="nav-link" data-page="about">About</a>
+                <a href="service.html" class="nav-link" data-page="services">Services</a>
+                <a href="blog.html" class="nav-link active" data-page="blog">Blog</a>
+                <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+                <a href="login.html" class="nav-link nav-btn-login" data-page="login"><i class="fa-regular fa-user"></i> Login</a>
+            </nav>
+
+            <div class="header-actions">
+               
+                <!-- Mobile Burger Menu -->
+                <button class="burger-menu" id="burger-menu" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content: Blog Page Layout -->
+    <main id="app-content" class="fade-in-section">
+        <!-- Subpage Hero Banner -->
+        <section class="page-hero">
+            <div class="page-hero-overlay"></div>
+            <div class="container">
+                <span class="page-hero-tag">Design Journal</span>
+                <h1 class="page-hero-title">Aesthetic Insights</h1>
+                <div class="breadcrumbs">
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Featured Article -->
+        <section class="featured-post-section" style="padding-top: 5rem;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Highlight</span>
+                    <h2 class="section-title">Editor's Pick</h2>
+                </div>
+                <div class="intro-grid" style="background-color: var(--bg-secondary); border-radius: 8px; overflow: hidden; align-items: center; gap: 0;">
+                    <div style="width: 100%; height: 100%;">
+                        <img src="assets/hero_living.webp" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 4rem;">
+                        <span class="intro-text-tag" style="margin-bottom: 1rem;">Interior Architecture</span>
+                        <h2 class="intro-title" style="font-size: 2.2rem; margin-bottom: 1rem;">The Resurgence of Brutalism in Modern Residential Spaces</h2>
+                        <p class="intro-desc" style="margin-bottom: 2rem;">Discover how exposed concrete, raw steel profiles, and monumental structural forms are being adapted into cozy, human-centric living spaces.</p>
+                        <a href="404.html" class="btn btn-primary">Read Featured Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Categories Filter -->
+        <section class="categories-section" style="padding: 4rem 0;">
+            <div class="container">
+                <div class="filter-tabs" style="justify-content: center; margin-bottom: 0;">
+                    <button class="filter-tab active" data-filter="all">All Topics</button>
+                    <button class="filter-tab" data-filter="architecture">Architecture</button>
+                    <button class="filter-tab" data-filter="interiors">Interiors</button>
+                    <button class="filter-tab" data-filter="materials">Materials</button>
+                    <button class="filter-tab" data-filter="trends">Design Trends</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Blog Masonry Grid -->
+        <section class="blog-section" style="padding-top: 0;">
+            <div class="container">
+                <div class="blog-grid">
+                    <div class="blog-card" data-id="natural-materials">
+                        <div class="blog-card-image-box">
+                            <img src="assets/project_res1.webp" alt="Natural Materials & Brass Accent Trends" class="blog-card-image">
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> June 18, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> By Marcus Vance</span>
+                            </div>
+                            <h2 class="blog-card-title">Natural Materials & Brass Accent Trends</h2>
+                            <p class="blog-card-excerpt">Exploring the fusion of raw textured limestone, tactile walnut panels, and warm brushed brass profiles in contemporary interior design.</p>
+                            <span class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-id="minimalist-philosophy">
+                        <div class="blog-card-image-box">
+                            <img src="assets/hero_kitchen.webp" alt="The Narrative of Minimalist Luxury" class="blog-card-image">
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> May 28, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> By Elena Rostova</span>
+                            </div>
+                            <h2 class="blog-card-title">The Narrative of Minimalist Luxury</h2>
+                            <p class="blog-card-excerpt">How space, lighting, and shadow serve as active design elements to create calm, contemplative, and functional living spaces.</p>
+                            <span class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-id="workplace-evolution">
+                        <div class="blog-card-image-box">
+                            <img src="assets/hero_office.webp" alt="Biophilia in the Executive Workspace" class="blog-card-image">
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> April 14, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> By Julian Thorne</span>
+                            </div>
+                            <h2 class="blog-card-title">Biophilia in the Executive Workspace</h2>
+                            <p class="blog-card-excerpt">Integrating lush indoor planting, water elements, and organic curvature into corporate offices to boost creativity and wellbeing.</p>
+                            <span class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Newsletter Subscription -->
+        <section class="newsletter-section" style="background-color: var(--bg-secondary); padding: 5rem 0;">
+            <div class="container">
+                <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                    <i class="fa-regular fa-envelope-open" style="font-size: 3rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+                    <h2 class="section-title">Subscribe to the Interiar Journal</h2>
+                    <p class="section-desc" style="margin-bottom: 2rem;">Get our latest design articles, material guides, and exclusive architectural insights delivered directly to your inbox every month.</p>
+                    <form id="blog-newsletter-form" class="newsletter-form" style="max-width: 100%;">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email Address" required aria-label="Email Address" style="padding: 1rem 1.5rem;">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Popular Tags -->
+        <section class="tags-section" style="padding: 5rem 0; border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <h2 class="section-title" style="font-size: 1.8rem;">Explore by Tag</h2>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 800px; margin: 0 auto;">
+                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Minimalism</span>
+                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Biophilia</span>
+                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Brutalism</span>
+                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Marble</span>
+                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Lighting</span>
+                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Commercial</span>
+                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Renovation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Call to Action -->
+        <section class="about-cta" id="blog-cta" style="border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="about-cta-inner">
+                    <span class="section-tag">Inspired?</span>
+                    <h2>Bring Your Ideas to Life</h2>
+                    <p>Did an article spark an idea for your own space? Let's discuss how we can adapt these concepts to your unique environment.</p>
+                    <div class="about-cta-btns">
+                        <a href="404.html" class="btn btn-primary">Start a Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 35px; width: auto; object-fit: contain;">
+                    </a>
+                    <p class="brand-desc">Creating bespoke, timeless interior spaces and architectural concepts that harmonize luxury and functionality.</p>
+                    <div class="social-links">
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Home</a></li>
+                        <li><a href="404.html">About</a></li>
+                        <li><a href="404.html">Services</a></li>
+                        <li><a href="404.html">Blog</a></li>
+                        <li><a href="404.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Residential Architecture</a></li>
+                        <li><a href="404.html">Commercial Interiors</a></li>
+                        <li><a href="404.html">Bespoke Furniture Curation</a></li>
+                        <li><a href="404.html">Space Optimization</a></li>
+                        <li><a href="404.html">3D Visualization</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col newsletter-col">
+                    <h3>Join Our Journal</h3>
+                    <p>Subscribe to receive architectural inspiration, design tips, and studio updates.</p>
+                    <form id="footer-newsletter-form" class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email Address" required aria-label="Email Address">
+                            <button type="submit" class="newsletter-btn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                        </div>
+                    </form>
+                    <div id="newsletter-toast" class="newsletter-toast">Subscribed successfully!</div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Studio. All Rights Reserved. Designed for elegance.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>

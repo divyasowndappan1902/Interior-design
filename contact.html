@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Interiar Design Studio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Page Loader Animation -->
+    <div id="loader" class="loader-container">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-page="home">Home</a>
+                <a href="about.html" class="nav-link" data-page="about">About</a>
+                <a href="service.html" class="nav-link" data-page="services">Services</a>
+                <a href="blog.html" class="nav-link" data-page="blog">Blog</a>
+                <a href="contact.html" class="nav-link active" data-page="contact">Contact</a>
+                <a href="login.html" class="nav-link nav-btn-login" data-page="login"><i class="fa-regular fa-user"></i> Login</a>
+            </nav>
+
+            <div class="header-actions">
+              
+                <!-- Mobile Burger Menu -->
+                <button class="burger-menu" id="burger-menu" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content: Contact Page Layout -->
+    <main id="app-content" class="fade-in-section">
+        <!-- Subpage Hero Banner -->
+        <section class="page-hero">
+            <div class="page-hero-overlay"></div>
+            <div class="container">
+                <span class="page-hero-tag">Get In Touch</span>
+                <h1 class="page-hero-title">Contact Interiar</h1>
+                <div class="breadcrumbs">
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Contact Form and Details -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Details Col -->
+                    <div class="contact-info-col">
+                        <h2>Let's Start Your Dream Space</h2>
+                        <p class="contact-info-desc">Whether you have detailed architectural blueprints ready for build, or just a collection of ideas on a napkin, our design team is ready to listen.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-detail-text">
+                                    <h3>Studio Address</h3>
+                                    <p>MMR Complex, , Chinna Thirupathi, Salem, TN 636008</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-detail-text">
+                                    <h3>Telephone</h3>
+                                    <p><a href="tel:+12125550199">+91 (987) 555-0199</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-detail-text">
+                                    <h3>Electronic Mail</h3>
+                                    <p><a href="mailto:design@interiar.com">Stackly@interiar.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Actual Interactive Map -->
+                        <div class="map-container" style="width: 100%; height: 250px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=Chinna%20Thirupathi,%20Salem,%20TN%20636008&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(90%) contrast(85%);" 
+                                allowfullscreen="" 
+                                aria-hidden="false" 
+                                tabindex="0">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Col -->
+                    <div class="contact-form-container">
+                        <h2 class="form-title">Consultation Request</h2>
+                        <form id="contact-form" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <input type="text" id="contact-name" class="form-input" placeholder=" " required>
+                                    <label for="contact-name" class="form-label">Full Name</label>
+                                    <div class="form-error">Please enter your name</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="contact-email" class="form-input" placeholder=" " required>
+                                    <label for="contact-email" class="form-label">Email Address</label>
+                                    <div class="form-error">Please enter a valid email</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select id="contact-service" class="form-input" required style="cursor: pointer; padding-right: 1.5rem;">
+                                    <option value="" disabled selected hidden>Select Service Category</option>
+                                    <option value="residential">Residential Architecture</option>
+                                    <option value="commercial">Commercial Interior</option>
+                                    <option value="furniture">Furniture Curation</option>
+                                    <option value="consultation">General Consultation</option>
+                                </select>
+                                <div class="form-error">Please select a service option</div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 2rem;">
+                                <textarea id="contact-message" class="form-input" placeholder=" " rows="4" required style="resize: none;"></textarea>
+                                <label for="contact-message" class="form-label">Tell us about your project</label>
+                                <div class="form-error">Please describe your requirements</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit-btn">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Global Offices -->
+        <section class="locations-section" style="background-color: var(--bg-secondary); padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Global Presence</span>
+                    <h2 class="section-title">Our International Studios</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="padding: 2rem; border: 1px solid var(--border-color); background-color: var(--bg-primary);">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">London</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 0.5rem;"><i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 0.5rem;"></i> 45 Design Quarter, Soho</p>
+                        <p style="color: var(--text-secondary);"><i class="fa-solid fa-phone" style="color: var(--accent); margin-right: 0.5rem;"></i> +44 20 7123 4567</p>
+                    </div>
+                    <div style="padding: 2rem; border: 1px solid var(--border-color); background-color: var(--bg-primary);">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Dubai</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 0.5rem;"><i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 0.5rem;"></i> Design District, D3</p>
+                        <p style="color: var(--text-secondary);"><i class="fa-solid fa-phone" style="color: var(--accent); margin-right: 0.5rem;"></i> +971 4 123 4567</p>
+                    </div>
+                    <div style="padding: 2rem; border: 1px solid var(--border-color); background-color: var(--bg-primary);">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Singapore</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 0.5rem;"><i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 0.5rem;"></i> 12 Marina Boulevard</p>
+                        <p style="color: var(--text-secondary);"><i class="fa-solid fa-phone" style="color: var(--accent); margin-right: 0.5rem;"></i> +65 6123 4567</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Pre-Consultation FAQ -->
+        <section class="faq-section" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <span class="section-tag">Before You Call</span>
+                    <h2 class="section-title">Pre-Consultation FAQ</h2>
+                </div>
+                <div class="accordion-container" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="accordion-item" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+                        <button class="accordion-trigger" style="width: 100%; padding: 1.5rem; text-align: left; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-family: var(--font-body);">
+                            What should I prepare for our first meeting?
+                            <i class="fa-solid fa-plus accordion-icon" style="transition: transform var(--transition-fast);"></i>
+                        </button>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height var(--transition-smooth); padding: 0 1.5rem;">
+                            <p style="color: var(--text-secondary); padding-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">Ideally, provide any existing floor plans, inspirational mood boards (Pinterest, etc.), and a rough budget guideline. This helps us tailor the consultation to your exact needs.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+                        <button class="accordion-trigger" style="width: 100%; padding: 1.5rem; text-align: left; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-family: var(--font-body);">
+                            Do you offer virtual consultations?
+                            <i class="fa-solid fa-plus accordion-icon" style="transition: transform var(--transition-fast);"></i>
+                        </button>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height var(--transition-smooth); padding: 0 1.5rem;">
+                            <p style="color: var(--text-secondary); padding-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">Yes, we regularly conduct initial project briefings via Zoom or Google Meet for our international clients before planning a site visit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Social Media -->
+        <section class="social-section" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title" style="margin-bottom: 2rem;">Follow Our Process</h2>
+                <div class="social-links" style="justify-content: center; gap: 2rem;">
+                    <a href="404.html" aria-label="Instagram" style="font-size: 2rem;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404.html" aria-label="Pinterest" style="font-size: 2rem;"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="404.html" aria-label="LinkedIn" style="font-size: 2rem;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Careers -->
+        <section class="careers-section" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="intro-grid" style="align-items: center;">
+                    <div>
+                        <span class="intro-text-tag">Join Us</span>
+                        <h2 class="intro-title">We're Always Looking for Talent</h2>
+                        <p class="intro-desc">Are you an architect, 3D visualizer, or interior designer with an eye for luxury and detail? We are constantly expanding our global team.</p>
+                        <a href="404.html" class="btn btn-secondary">Email Your Portfolio</a>
+                    </div>
+                    <div style="background-color: var(--bg-secondary); padding: 3rem; border: 1px solid var(--border-color);">
+                        <h3 style="margin-bottom: 1rem;">Current Openings</h3>
+                        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;"><span>Senior Interior Designer</span> <span style="color: var(--accent);">London</span></li>
+                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;"><span>3D Visualizer</span> <span style="color: var(--accent);">Remote</span></li>
+                            <li style="display: flex; justify-content: space-between;"><span>Project Manager</span> <span style="color: var(--accent);">Dubai</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 35px; width: auto; object-fit: contain;">
+                    </a>
+                    <p class="brand-desc">Creating bespoke, timeless interior spaces and architectural concepts that harmonize luxury and functionality.</p>
+                    <div class="social-links">
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Home</a></li>
+                        <li><a href="404.html">About</a></li>
+                        <li><a href="404.html">Services</a></li>
+                        <li><a href="404.html">Blog</a></li>
+                        <li><a href="404.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Residential Architecture</a></li>
+                        <li><a href="404.html">Commercial Interiors</a></li>
+                        <li><a href="404.html">Bespoke Furniture Curation</a></li>
+                        <li><a href="404.html">Space Optimization</a></li>
+                        <li><a href="404.html">3D Visualization</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col newsletter-col">
+                    <h3>Join Our Journal</h3>
+                    <p>Subscribe to receive architectural inspiration, design tips, and studio updates.</p>
+                    <form id="footer-newsletter-form" class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email Address" required aria-label="Email Address">
+                            <button type="submit" class="newsletter-btn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                        </div>
+                    </form>
+                    <div id="newsletter-toast" class="newsletter-toast">Subscribed successfully!</div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Studio. All Rights Reserved. Designed for elegance.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast success notification -->
+    <div class="toast-notification" id="toast-success">
+        <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="toast-text">
+            <h4>Message Transmitted</h4>
+            <p>We will contact you within 24 business hours.</p>
+        </div>
+    </div>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal | Stackly</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme dashboard-body">
+    <div class="dashboard-wrapper fade-in-section">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
+            </a>
+
+            <nav class="sidebar-nav">
+                <a href="404.html" class="sidebar-link active" data-panel="panel-overview"><i class="fa-solid fa-house"></i> Overview</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-designs"><i class="fa-solid fa-image"></i> Designs</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-messages"><i class="fa-solid fa-message"></i> Messages</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-billing"><i class="fa-solid fa-file-invoice"></i> Billing</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile-sm">
+                    <div class="user-avatar" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color);">C</div>
+                    <div class="user-info">
+                        <h4>Client Portal</h4>
+                        <p id="user-display-email" style="font-size: 0.8rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 140px;" title="Obsidian Living Space">Obsidian Living Space</p>
+                    </div>
+                </div>
+                <a href="login.html" class="icon-btn" style="width: 35px; height: 35px;" aria-label="Logout"><i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 0.9rem;"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dashboard-main">
+            <!-- Panel: Overview -->
+            <div id="panel-overview" class="dashboard-panel active">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="dashboard-header-title">
+                </div>
+                <div class="dashboard-header-actions">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">
+                        <i class="fa-solid fa-calendar-plus"></i> Book Meeting
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                
+                <!-- Welcome Banner -->
+                <div class="dashboard-section" style="background: linear-gradient(135deg, rgba(197, 168, 128, 0.1) 0%, transparent 100%); border-color: rgba(197, 168, 128, 0.3);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 0.5rem; font-weight: 400;">Welcome back, Emily.</h2>
+                            <p style="color: var(--text-secondary); max-width: 600px;">Your living space renovation is currently in the <strong>Rendering Phase</strong>. The design team has uploaded new 3D visualizations for your approval.</p>
+                        </div>
+                        <div class="icon-btn" style="width: 60px; height: 60px; background-color: var(--accent); color: var(--bg-secondary); border: none;">
+                            <i class="fa-solid fa-gem" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-labels">
+                            <span>Overall Progress</span>
+                            <span style="color: var(--accent); font-weight: 600;">65%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 65%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;">
+                            <span style="color: var(--text-primary);">Concept Approved</span>
+                            <span style="color: var(--accent);">3D Rendering</span>
+                            <span>Procurement</span>
+                            <span>Final Build</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                    <!-- Left Col -->
+                    <div>
+                        <!-- Recent Design Files -->
+                        <section class="dashboard-section">
+                            <div class="dashboard-section-header">
+                                <h3 class="dashboard-section-title">Latest Renderings</h3>
+                                <a href="404.html" style="color: var(--accent); font-size: 0.9rem;">View All Files</a>
+                            </div>
+                            
+                            <div class="dash-gallery">
+                                <div class="dash-gallery-item">
+                                    <img src="assets/hero_living.webp" alt="Living Room Angle 1">
+                                    <div class="dash-gallery-overlay">
+                                        <p style="font-weight: 500; margin-bottom: 0.25rem;">Living Room - Main Angle</p>
+                                        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">Uploaded Today</p>
+                                    </div>
+                                </div>
+                                <div class="dash-gallery-item">
+                                    <img src="assets/hero_kitchen.webp" alt="Kitchen Concept">
+                                    <div class="dash-gallery-overlay">
+                                        <p style="font-weight: 500; margin-bottom: 0.25rem;">Kitchen Concept</p>
+                                        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">Uploaded Yesterday</p>
+                                    </div>
+                                </div>
+                                <div class="dash-gallery-item" style="background-color: var(--bg-primary); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--text-muted);">
+                                    <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent);"></i>
+                                    <p style="font-size: 0.9rem;">Drop feedback files or inspiration here</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Right Col -->
+                    <div>
+                        <!-- Next Meeting -->
+                        <section class="dashboard-section">
+                            <h3 class="dashboard-section-title" style="margin-bottom: 1.5rem;">Next Scheduled</h3>
+                            
+                            <div style="background-color: var(--bg-primary); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                    <div>
+                                        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Design Review</h4>
+                                        <p style="font-size: 0.85rem; color: var(--accent);">Video Conference</p>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Oct 12</h4>
+                                        <p style="font-size: 0.85rem; color: var(--text-muted);">10:00 AM</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary" style="width: 100%; padding: 0.75rem;">Join Call</button>
+                            </div>
+
+                            <!-- Financial Overview -->
+                            <h3 class="dashboard-section-title" style="margin-bottom: 1.5rem; margin-top: 2.5rem;">Financials</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                                    <div>
+                                        <p style="font-weight: 500; color: var(--text-primary);">Deposit Invoice</p>
+                                        <p style="font-size: 0.8rem; color: var(--text-muted);">INV-2026-041</p>
+                                    </div>
+                                    <span class="status-badge status-completed">Paid</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                                    <div>
+                                        <p style="font-weight: 500; color: var(--text-primary);">Phase 2: Renderings</p>
+                                        <p style="font-size: 0.8rem; color: var(--text-muted);">INV-2026-089</p>
+                                    </div>
+                                    <span class="status-badge status-pending">Due Oct 15</span>
+                                </div>
+                                <a href="404.html" style="color: var(--accent); font-size: 0.9rem; text-align: center; display: block; margin-top: 0.5rem;">View All Invoices</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- Panel: Designs -->
+            <div id="panel-designs" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header">
+                    <div class="dashboard-header-title"><h2>Design Presentations</h2></div>
+                    <div class="dashboard-header-actions">
+                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Inspiration</button>
+                    </div>
+                </header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    
+                    <h3 class="dashboard-section-title" style="margin-bottom: 1.5rem;">For Your Review</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="height: 200px; background: url('assets/hero_living.webp') center/cover; border-radius: 8px; margin-bottom: 1.5rem; position: relative;">
+                                <span class="status-badge status-pending" style="position: absolute; top: 1rem; right: 1rem;">Needs Approval</span>
+                            </div>
+                            <h3 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">Living Room - Final Renders</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Updated views including the new marble fireplace and custom built-ins.</p>
+                            <div style="display: flex; gap: 1rem;">
+                                <button class="btn-primary" style="flex: 1; padding: 0.75rem;">Approve</button>
+                                <button class="btn-secondary" style="flex: 1; padding: 0.75rem;">Add Comments</button>
+                            </div>
+                        </div>
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <div style="height: 200px; background: url('assets/hero_kitchen.webp') center/cover; border-radius: 8px; margin-bottom: 1.5rem; position: relative;">
+                                <span class="status-badge status-pending" style="position: absolute; top: 1rem; right: 1rem;">Needs Approval</span>
+                            </div>
+                            <h3 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">Kitchen Material Board</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Cabinet finishes, backsplash options, and hardware selections.</p>
+                            <div style="display: flex; gap: 1rem;">
+                                <button class="btn-primary" style="flex: 1; padding: 0.75rem;">Approve</button>
+                                <button class="btn-secondary" style="flex: 1; padding: 0.75rem;">Add Comments</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="dashboard-section-title" style="margin-bottom: 1.5rem;">Approved Designs</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem;">
+                        <div class="glass-card" style="padding: 1rem; text-align: center;">
+                            <div style="height: 120px; background: url('assets/floor_plan_approved.webp') center/cover; border-radius: 8px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.05);">
+                            </div>
+                            <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.25rem;">Initial Floor Plan</h4>
+                            <p style="color: #32c896; font-size: 0.8rem;"><i class="fa-solid fa-check"></i> Approved Oct 1</p>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem; text-align: center;">
+                            <div style="height: 120px; background: url('assets/color_palette_approved.webp') center/cover; border-radius: 8px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.05);">
+                            </div>
+                            <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.25rem;">Color Palette</h4>
+                            <p style="color: #32c896; font-size: 0.8rem;"><i class="fa-solid fa-check"></i> Approved Sep 28</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Messages -->
+            <div id="panel-messages" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header">
+                    <div class="dashboard-header-title"><h2>Messages</h2></div>
+                    <div class="user-profile-sm">
+                        <div class="user-avatar" style="background: rgba(197, 168, 128, 0.2); color: var(--accent); width: 35px; height: 35px; font-size: 1rem;">EK</div>
+                        <div class="user-info">
+                            <h4 style="font-size: 0.9rem;">Elena K.</h4>
+                            <p style="font-size: 0.75rem;">Lead Designer</p>
+                        </div>
+                    </div>
+                </header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; height: calc(100vh - 200px);">
+                        <!-- Chat Box -->
+                        <div class="glass-card" style="padding: 1.5rem; display: flex; flex-direction: column;">
+                            <div style="flex: 1; overflow-y: auto; padding-right: 1rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                                
+                                <div style="text-align: center; margin-bottom: 1rem;">
+                                    <span style="background: rgba(255,255,255,0.05); color: var(--text-muted); font-size: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 12px;">Today</span>
+                                </div>
+
+                                <!-- Received Message -->
+                                <div style="display: flex; gap: 1rem; align-items: flex-end;">
+                                    <div class="user-avatar" style="width: 32px; height: 32px; font-size: 0.8rem; background: rgba(197, 168, 128, 0.2); color: var(--accent);">EK</div>
+                                    <div style="background: rgba(255,255,255,0.05); padding: 1rem 1.25rem; border-radius: 16px; border-bottom-left-radius: 4px; max-width: 80%;">
+                                        <p style="color: var(--text-primary); font-size: 0.95rem; line-height: 1.5;">Hi Emily! We've uploaded the new kitchen renders. I think you'll love how the natural light hits the island. Let us know what you think!</p>
+                                        <span style="color: var(--text-muted); font-size: 0.75rem; margin-top: 0.5rem; display: block;">10:30 AM</span>
+                                    </div>
+                                </div>
+
+                                <!-- Sent Message -->
+                                <div style="display: flex; gap: 1rem; align-items: flex-end; justify-content: flex-end;">
+                                    <div style="background: rgba(197, 168, 128, 0.15); border: 1px solid rgba(197, 168, 128, 0.3); padding: 1rem 1.25rem; border-radius: 16px; border-bottom-right-radius: 4px; max-width: 80%;">
+                                        <p style="color: var(--text-primary); font-size: 0.95rem; line-height: 1.5;">They look amazing! I absolutely love the countertop material. Do we have options for the cabinet hardware?</p>
+                                        <span style="color: rgba(255,255,255,0.5); font-size: 0.75rem; margin-top: 0.5rem; display: block; text-align: right;">11:15 AM</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <button class="icon-btn" style="width: 45px; height: 45px; border: 1px solid var(--border-color);"><i class="fa-solid fa-paperclip"></i></button>
+                                <input type="text" class="input-field" placeholder="Type a message..." style="flex: 1; height: 45px; border-radius: 24px; padding: 0 1.5rem;">
+                                <button class="btn-primary" style="height: 45px; width: 45px; border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Shared Files -->
+                        <div class="glass-card" style="padding: 1.5rem;">
+                            <h3 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 1.5rem;">Shared Files</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 8px;">
+                                    <div style="color: var(--accent); font-size: 1.5rem;"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div style="flex: 1;">
+                                        <p style="color: var(--text-primary); font-size: 0.9rem;">Kitchen_Hardware.pdf</p>
+                                        <p style="color: var(--text-muted); font-size: 0.75rem;">1.2 MB</p>
+                                    </div>
+                                    <button class="icon-btn" style="width: 30px; height: 30px;"><i class="fa-solid fa-download" style="font-size: 0.8rem;"></i></button>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 8px;">
+                                    <div style="color: var(--accent); font-size: 1.5rem;"><i class="fa-solid fa-image"></i></div>
+                                    <div style="flex: 1;">
+                                        <p style="color: var(--text-primary); font-size: 0.9rem;">Sofa_Fabric_Sample.webp</p>
+                                        <p style="color: var(--text-muted); font-size: 0.75rem;">3.4 MB</p>
+                                    </div>
+                                    <button class="icon-btn" style="width: 30px; height: 30px;"><i class="fa-solid fa-download" style="font-size: 0.8rem;"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Billing -->
+            <div id="panel-billing" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header"><div class="dashboard-header-title"><h2>Billing & Payments</h2></div></header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div class="glass-card" style="padding: 2rem; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, rgba(197, 168, 128, 0.1) 0%, transparent 100%); border-color: rgba(197, 168, 128, 0.3);">
+                            <div>
+                                <p style="color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Current Balance Due</p>
+                                <h3 style="color: var(--text-primary); font-size: 3rem; font-weight: 300; margin-bottom: 0.5rem;">$4,500.00</h3>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">Invoice #INV-2026-089 • Due Oct 15, 2026</p>
+                            </div>
+                            <button class="btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);">Pay Now</button>
+                        </div>
+                        
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h4 style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.1rem;">Payment Method</h4>
+                            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 1rem;">
+                                <i class="fa-brands fa-cc-visa" style="font-size: 2rem; color: #fff;"></i>
+                                <div style="flex: 1;">
+                                    <p style="color: var(--text-primary); font-size: 0.95rem;">Visa ending in 4242</p>
+                                    <p style="color: var(--text-muted); font-size: 0.8rem;">Expires 12/28</p>
+                                </div>
+                            </div>
+                            <button class="btn-secondary" style="width: 100%; padding: 0.75rem;">Update Payment Method</button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1.5rem;">Payment History</h3>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                                <thead>
+                                    <tr style="border-bottom: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                                        <th style="padding: 1rem 0; font-weight: 500;">Invoice ID</th>
+                                        <th style="padding: 1rem 0; font-weight: 500;">Description</th>
+                                        <th style="padding: 1rem 0; font-weight: 500;">Date</th>
+                                        <th style="padding: 1rem 0; font-weight: 500;">Amount</th>
+                                        <th style="padding: 1rem 0; font-weight: 500;">Status</th>
+                                        <th style="padding: 1rem 0; font-weight: 500; text-align: right;">Receipt</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary);">#INV-2026-089</td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-secondary);">Phase 2: Renderings</td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-secondary);">Oct 01, 2026</td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary); font-weight: 500;">$4,500.00</td>
+                                        <td style="padding: 1.25rem 0;"><span class="status-badge status-pending">Pending</span></td>
+                                        <td style="padding: 1.25rem 0; text-align: right;">-</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary);">#INV-2026-041</td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-secondary);">Initial Deposit</td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-secondary);">Sep 15, 2026</td>
+                                        <td style="padding: 1.25rem 0; color: var(--text-primary); font-weight: 500;">$2,000.00</td>
+                                        <td style="padding: 1.25rem 0;"><span class="status-badge status-completed">Paid</span></td>
+                                        <td style="padding: 1.25rem 0; text-align: right;"><a href="404.html" style="color: var(--accent);"><i class="fa-solid fa-download"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Settings -->
+            <div id="panel-settings" class="dashboard-panel" style="display: none;">
+                <header class="dashboard-header"><div class="dashboard-header-title"><h2>Account Settings</h2></div></header>
+                <div class="dashboard-content" style="padding: 2rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1000px;">
+                        
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="color: var(--text-primary); margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Profile Information</h3>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Full Name</label>
+                                <input type="text" class="input-field" value="Emily Robertson" style="width: 100%;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Email Address</label>
+                                <input type="email" class="input-field" value="emily@example.com" style="width: 100%;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Phone Number</label>
+                                <input type="tel" class="input-field" value="(555) 123-4567" style="width: 100%;">
+                            </div>
+                            <button class="btn-primary" style="padding: 0.75rem 1.5rem;">Save Profile</button>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 2rem;">
+                            <div class="glass-card" style="padding: 2rem;">
+                                <h3 style="color: var(--text-primary); margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Security</h3>
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Current Password</label>
+                                    <input type="password" class="input-field" placeholder="••••••••" style="width: 100%;">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">New Password</label>
+                                    <input type="password" class="input-field" placeholder="Enter new password" style="width: 100%;">
+                                </div>
+                                <button class="btn-secondary" style="padding: 0.75rem 1.5rem;">Update Password</button>
+                            </div>
+
+                            <div class="glass-card" style="padding: 2rem;">
+                                <h3 style="color: var(--text-primary); margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Notifications</h3>
+                                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                    <label style="display: flex; align-items: center; justify-content: space-between; color: var(--text-secondary); cursor: pointer;">
+                                        <span>New design files uploaded</span>
+                                        <input type="checkbox" checked style="accent-color: var(--accent); transform: scale(1.2);">
+                                    </label>
+                                    <label style="display: flex; align-items: center; justify-content: space-between; color: var(--text-secondary); cursor: pointer;">
+                                        <span>New messages received</span>
+                                        <input type="checkbox" checked style="accent-color: var(--accent); transform: scale(1.2);">
+                                    </label>
+                                    <label style="display: flex; align-items: center; justify-content: space-between; color: var(--text-secondary); cursor: pointer;">
+                                        <span>Upcoming payment reminders</span>
+                                        <input type="checkbox" checked style="accent-color: var(--accent); transform: scale(1.2);">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Interiar Premium Studio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Page Loader Animation -->
+    <div id="loader" class="loader-container">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-page="home">Home</a>
+                <a href="about.html" class="nav-link active" data-page="about">About</a>
+                <a href="service.html" class="nav-link" data-page="services">Services</a>
+                <a href="blog.html" class="nav-link" data-page="blog">Blog</a>
+                <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+                <a href="login.html" class="nav-link nav-btn-login" data-page="login"><i class="fa-regular fa-user"></i> Login</a>
+            </nav>
+
+            <div class="header-actions">
+               
+
+                <!-- Mobile Burger Menu -->
+                <button class="burger-menu" id="burger-menu" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content: About Page Layout -->
+    <main id="app-content" class="fade-in-section">
+        <!-- Subpage Hero Banner -->
+        <section class="page-hero">
+            <div class="page-hero-overlay"></div>
+            <div class="container">
+                <span class="page-hero-tag">Our Studio</span>
+                <h1 class="page-hero-title">About Interiar</h1>
+                <div class="breadcrumbs">
+                   
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Philosophy Section -->
+        <section class="about-philosophy">
+            <div class="container">
+                <div class="philosophy-grid">
+                    <img src="assets/hero_office.webp" alt="Architecture workspace detailing" class="philosophy-image">
+                    
+                    <div class="philosophy-text-container">
+                        <span class="intro-text-tag">Philosophy</span>
+                        <h2 class="intro-title">Designing Spaces that Tell Stories</h2>
+                        <div class="philosophy-quote">
+                            "A space should not only appeal to the eye. It must respond to the touch, the light, the acoustic envelope, and the soul."
+                        </div>
+                        <div class="philosophy-paragraphs">
+                            <p>Founded in 2014, Interiar began as a boutique architectural collective with a clear mandate: to reject standard mass-produced interiors in favor of highly customized, artisanal environments. Over the decade, our team has expanded into a full-service architectural studio capable of orchestrating complex residential renovations and commercial masterplans globally.</p>
+                            <p>We work closely with local stonemasons, carpenters, and visual artists to ensure that every texture and detail in our designs has a purpose and is crafted to survive generations. Our approach is grounded in environmental integration—aligning interior layouts with natural wind corridors and light vectors to reduce energy consumption while maximizing human comfort.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Timeline Cards -->
+                <div class="process-timeline">
+                    <h2 class="process-timeline-title">Our Design Methodology</h2>
+                    <div class="timeline-grid">
+                        <div class="timeline-card">
+                            <div class="timeline-number">01</div>
+                            <h3>Concept & Visual Synthesis</h3>
+                            <p>We begin by extracting your design aspirations, material preferences, and functional needs to build mood boards, material palettes, and architectural drafts.</p>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-number">02</div>
+                            <h3>Detailing & 3D Drafting</h3>
+                            <p>Using laser-precise space planning and structural blueprints, we render 3D visualizations to experience the layout before laying a single brick.</p>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-number">03</div>
+                            <h3>Execution & Craft Curation</h3>
+                            <p>Our team oversees the builder procurement, material sourcing, site execution, and final furniture curation to ensure a flawless transfer of designs to reality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Board Members Gallery -->
+        <section class="projects-gallery" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Creative Minds</span>
+                    <h2 class="section-title">Meet Our Architectural Board</h2>
+                    <p class="section-desc">A collective of experienced interior designers, structural engineers, and art directors dedicated to design excellence.</p>
+                </div>
+                
+                <div class="gallery-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="project-card" style="height: 420px;">
+                        <img src="assets/project_fur1.webp" alt="Director Profile" class="project-card-image" style="filter: grayscale(100%);">
+                        <div class="project-card-overlay" style="opacity: 1; transform: translateY(0); background: linear-gradient(0deg, rgba(10,10,12,0.95) 0%, transparent 80%);">
+                            <span class="project-tag">Principal Architect & Founder</span>
+                            <h3 class="project-title" style="font-size: 1.4rem; margin-bottom: 0.25rem;">Marcus Vance</h3>
+                            <p style="color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;">15+ Years Experience</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" style="height: 420px;">
+                        <img src="assets/project_res1.webp" alt="Designer Profile" class="project-card-image" style="filter: grayscale(100%);">
+                        <div class="project-card-overlay" style="opacity: 1; transform: translateY(0); background: linear-gradient(0deg, rgba(10,10,12,0.95) 0%, transparent 80%);">
+                            <span class="project-tag">Creative Interior Designer</span>
+                            <h3 class="project-title" style="font-size: 1.4rem; margin-bottom: 0.25rem;">Elena Rostova</h3>
+                            <p style="color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;">Paris Academy Graduate</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" style="height: 420px;">
+                        <img src="assets/project_com1.webp" alt="Visualizer Profile" class="project-card-image" style="filter: grayscale(100%);">
+                        <div class="project-card-overlay" style="opacity: 1; transform: translateY(0); background: linear-gradient(0deg, rgba(10,10,12,0.95) 0%, transparent 80%);">
+                            <span class="project-tag">Head of 3D Visualization</span>
+                            <h3 class="project-title" style="font-size: 1.4rem; margin-bottom: 0.25rem;">Julian Thorne</h3>
+                            <p style="color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;">CGI Expert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Studio History / Timeline -->
+        <section class="studio-history" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <span class="section-tag">Our Legacy</span>
+                    <h2 class="section-title">Studio History</h2>
+                </div>
+                <div style="max-width: 800px; margin: 3rem auto 0; position: relative; border-left: 2px solid var(--accent); padding-left: 2rem;">
+                    <div style="margin-bottom: 2.5rem; position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 20px; height: 20px; background: var(--bg-primary); border: 3px solid var(--accent); border-radius: 50%;"></div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--accent); margin-bottom: 0.5rem;">2012 - The Foundation</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Stackly was founded in London with a vision to merge classic architectural principles with modern luxury.</p>
+                    </div>
+                    <div style="margin-bottom: 2.5rem; position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 20px; height: 20px; background: var(--bg-primary); border: 3px solid var(--accent); border-radius: 50%;"></div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--accent); margin-bottom: 0.5rem;">2016 - International Expansion</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Opened our second studio in Dubai, handling multi-million dollar commercial and residential projects across the Middle East.</p>
+                    </div>
+                    <div style="position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 20px; height: 20px; background: var(--bg-primary); border: 3px solid var(--accent); border-radius: 50%;"></div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--accent); margin-bottom: 0.5rem;">2024 - Global Recognition</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Awarded 'Best International Interior Design Studio' and expanded into bespoke furniture curation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Core Values Section -->
+        <section class="core-values" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <span class="section-tag">Philosophy</span>
+                    <h2 class="section-title">Our Core Values</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div style="text-align: center; padding: 2rem;">
+                        <i class="fa-solid fa-gem" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem; font-family: var(--font-heading);">Uncompromising Quality</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">We source only the finest materials and partner with world-class artisans.</p>
+                    </div>
+                    <div style="text-align: center; padding: 2rem;">
+                        <i class="fa-solid fa-leaf" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem; font-family: var(--font-heading);">Sustainable Luxury</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Integrating eco-friendly practices without sacrificing high-end aesthetic appeal.</p>
+                    </div>
+                    <div style="text-align: center; padding: 2rem;">
+                        <i class="fa-solid fa-handshake" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem; font-family: var(--font-heading);">Client Centricity</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Your vision is our blueprint. We maintain transparent communication throughout.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Awards & Recognition Section -->
+        <section class="awards-section" style="padding: 5rem 0;">
+            <div class="container" style="text-align: center;">
+                <div class="section-header">
+                    <span class="section-tag">Excellence</span>
+                    <h2 class="section-title">Awards & Recognition</h2>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; margin-top: 3rem; opacity: 0.8;">
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-trophy" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem;">Best Residential Design</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Global Architecture Awards 2024</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-medal" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem;">Innovation in Workspace</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Design Excellence Gala 2023</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-crown" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem;">Top 50 Interior Studios</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Architectural Digest 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Testimonials Section -->
+        <section class="testimonials-section" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 2rem;">"Stackly redefines the boundaries of modern architecture and interior elegance."</h2>
+                <p style="color: var(--accent); font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">— The Design Review Quarterly</p>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 35px; width: auto; object-fit: contain;">
+                    </a>
+                    <p class="brand-desc">Creating bespoke, timeless interior spaces and architectural concepts that harmonize luxury and functionality.</p>
+                    <div class="social-links">
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Home</a></li>
+                        <li><a href="404.html">About</a></li>
+                        <li><a href="404.html">Services</a></li>
+                        <li><a href="404.html">Blog</a></li>
+                        <li><a href="404.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Residential Architecture</a></li>
+                        <li><a href="404.html">Commercial Interiors</a></li>
+                        <li><a href="404.html">Bespoke Furniture Curation</a></li>
+                        <li><a href="404.html">Space Optimization</a></li>
+                        <li><a href="404.html">3D Visualization</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col newsletter-col">
+                    <h3>Join Our Journal</h3>
+                    <p>Subscribe to receive architectural inspiration, design tips, and studio updates.</p>
+                    <form id="footer-newsletter-form" class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email Address" required aria-label="Email Address">
+                            <button type="submit" class="newsletter-btn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                        </div>
+                    </form>
+                    <div id="newsletter-toast" class="newsletter-toast">Subscribed successfully!</div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Studio. All Rights Reserved. Designed for elegance.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>

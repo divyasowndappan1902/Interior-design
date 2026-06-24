@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Interiar Design Studio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme login-standalone-body">
+    <!-- Page Loader Animation -->
+    <div id="loader" class="loader-container">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Main Content: Split Screen Login -->
+    <main class="login-split-container">
+        <!-- Left Side: Visual -->
+        <div class="login-visual-side">
+            <div class="login-visual-bg" style="background-image: url('assets/hero_living.webp');"></div>
+            <div class="login-visual-overlay"></div>
+            <div class="login-visual-content">
+                <a href="index.html" class="standalone-logo">
+                    <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
+                </a>
+                <h1 class="login-visual-title">Welcome to Your Portal.</h1>
+                <p class="login-visual-desc">Access your project dashboard to view designs, communicate with our team, and manage documents.</p>
+            </div>
+            <a href="index.html" class="back-home-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="login-form-side">
+            <div class="login-glass-wrapper fade-in-section">
+               
+
+                <!-- Login Panel -->
+                <div id="login-form" class="login-form-panel active">
+                    <div class="panel-header" style="text-align: center; margin-bottom: 2rem;">
+                        <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem; font-weight: 700;">Welcome Back</h2>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Please enter your details to sign in.</p>
+                    </div>
+
+                    <div class="social-login-top">
+                        <button class="ref-social-btn"><i class="fa-brands fa-google" style="color: #ea4335;"></i> Google</button>
+                        <button class="ref-social-btn"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i> Facebook</button>
+                    </div>
+
+                    <div class="ref-divider">
+                        <span>or continue with email</span>
+                    </div>
+
+                    <form id="sign-in-form">
+                        <div class="ref-segmented-control">
+                            <label class="ref-segment">
+                                <input type="radio" name="login_role" value="admin" checked>
+                                <span class="ref-segment-text">Admin</span>
+                            </label>
+                            <label class="ref-segment">
+                                <input type="radio" name="login_role" value="customer">
+                                <span class="ref-segment-text">Customer</span>
+                            </label>
+                        </div>
+
+                        <div class="glass-form-group">
+                            <input type="email" id="login-email" class="ref-input" placeholder="Email address" required>
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="glass-form-group" style="margin-bottom: 0.5rem;">
+                            <input type="password" id="login-password" class="ref-input" placeholder="Password" required>
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div style="text-align: right; margin-bottom: 2rem;">
+                            <a href="404.html" class="ref-forgot-link">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="ref-submit-btn">
+                            Sign In
+                        </button>
+                    </form>
+
+                    <div class="ref-footer-text">
+                        Don't have an account? <a href="signup.html">Sign up</a>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="index.html" class="ref-back-link">&larr; Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast success notification -->
+    <div class="toast-notification" id="toast-login">
+        <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="toast-text">
+            <h4 id="login-toast-title">Success</h4>
+            <p id="login-toast-desc">Redirecting to your dashboard...</p>
+        </div>
+    </div>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>

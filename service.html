@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Interiar Architectural Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Page Loader Animation -->
+    <div id="loader" class="loader-container">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-page="home">Home</a>
+                <a href="about.html" class="nav-link" data-page="about">About</a>
+                <a href="service.html" class="nav-link active" data-page="services">Services</a>
+                <a href="blog.html" class="nav-link" data-page="blog">Blog</a>
+                <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+                <a href="login.html" class="nav-link nav-btn-login" data-page="login"><i class="fa-regular fa-user"></i> Login</a>
+            </nav>
+
+            <div class="header-actions">
+              
+                <!-- Mobile Burger Menu -->
+                <button class="burger-menu" id="burger-menu" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content: Services Page Layout -->
+    <main id="app-content" class="fade-in-section">
+        <!-- Subpage Hero Banner -->
+        <section class="page-hero">
+            <div class="page-hero-overlay"></div>
+            <div class="container">
+                <span class="page-hero-tag">Our Expertise</span>
+                <h1 class="page-hero-title">Architectural Services</h1>
+                <div class="breadcrumbs">
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Services Cards List -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Capabilities</span>
+                    <h2 class="section-title">Comprehensive Architectural Solutions</h2>
+                    <p class="section-desc">Delivering excellence across residential, commercial, and bespoke furniture disciplines.</p>
+                </div>
+                <div class="services-list-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                        <h3 class="service-card-title">Residential Architecture</h3>
+                        <p class="service-card-desc">Bespoke spatial design for high-end apartments, villas, and modern residential developments.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> Bespoke Space Planning</li>
+                            <li><i class="fa-solid fa-check"></i> Structural Renovation Drafts</li>
+                            <li><i class="fa-solid fa-check"></i> Custom Millwork Detailings</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                        <h3 class="service-card-title">Commercial & Workspace</h3>
+                        <p class="service-card-desc">Creating collaborative, biophilic corporate headquarters, retail interiors, and hotel lobbies.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> Brand-Aligned Spatial Flow</li>
+                            <li><i class="fa-solid fa-check"></i> Acoustic Panel Arrangements</li>
+                            <li><i class="fa-solid fa-check"></i> Lighting Circadian Calendars</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+                        <h3 class="service-card-title">Furniture Curation</h3>
+                        <p class="service-card-desc">Sourcing and commissioning unique textile, wood, and marble furniture articles for projects.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> Artisan Designer Sourcing</li>
+                            <li><i class="fa-solid fa-check"></i> Bouclé & Leather Selection</li>
+                            <li><i class="fa-solid fa-check"></i> Scale and Placement Drawings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Design Process -->
+        <section class="process-section" style="background-color: var(--bg-secondary); padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">How We Work</span>
+                    <h2 class="section-title">A Seamless Design Journey</h2>
+                </div>
+                <div class="timeline-grid">
+                    <div class="timeline-card">
+                        <div class="timeline-number">01</div>
+                        <h3>Consultation</h3>
+                        <p>We begin by extracting your design aspirations, material preferences, and functional needs.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-number">02</div>
+                        <h3>Drafting</h3>
+                        <p>Using laser-precise space planning, we render 3D visualizations to experience the layout.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-number">03</div>
+                        <h3>Execution</h3>
+                        <p>Our team oversees the builder procurement, material sourcing, and site execution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Custom Interactive Accordion for FAQs -->
+        <section class="faq-section" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="intro-grid" style="align-items: start;">
+                    <div>
+                        <span class="intro-text-tag">F.A.Q.</span>
+                        <h2 class="intro-title">Common Architectural Questions</h2>
+                        <p class="intro-desc" style="margin-bottom: 0;">We answer standard procedural queries regarding consultation schedules, design pricing, and contractor coordination.</p>
+                    </div>
+                    
+                    <div class="accordion-container" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="accordion-item" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+                            <button class="accordion-trigger" style="width: 100%; padding: 1.5rem; text-align: left; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-family: var(--font-body);">
+                                What is the typical project duration?
+                                <i class="fa-solid fa-plus accordion-icon" style="transition: transform var(--transition-fast);"></i>
+                            </button>
+                            <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height var(--transition-smooth); padding: 0 1.5rem;">
+                                <p style="color: var(--text-secondary); padding-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">A residential design project typically takes 12 to 24 weeks depending on scale. This includes 6 weeks of architectural detailing and visual drafting, followed by procurement and execution phases.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+                            <button class="accordion-trigger" style="width: 100%; padding: 1.5rem; text-align: left; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-family: var(--font-body);">
+                                Do you charge flat fees or percentages?
+                                <i class="fa-solid fa-plus accordion-icon" style="transition: transform var(--transition-fast);"></i>
+                            </button>
+                            <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height var(--transition-smooth); padding: 0 1.5rem;">
+                                <p style="color: var(--text-secondary); padding-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">For standard design blueprints, we offer transparent flat-rate consultations (see our pricing below). For full turn-key execution and site supervision, we charge an agreed percentage of the overall project build value.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+                            <button class="accordion-trigger" style="width: 100%; padding: 1.5rem; text-align: left; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-family: var(--font-body);">
+                                Can you coordinate with my local contractor?
+                                <i class="fa-solid fa-plus accordion-icon" style="transition: transform var(--transition-fast);"></i>
+                            </button>
+                            <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height var(--transition-smooth); padding: 0 1.5rem;">
+                                <p style="color: var(--text-secondary); padding-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">Yes. We provide complete structural blueprints, millwork elevations, electrical templates, and materials lists which can be seamlessly executed by any certified local building team.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Flat-Rate Design Tiers Pricing Grid -->
+        <section class="pricing-section" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Investment</span>
+                    <h2 class="pricing-title">Flat-Rate Design Tiers</h2>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <span class="pricing-name">Concept Draft</span>
+                        <div class="pricing-price">$1,499<span> / room</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Concept Mood Boards</li>
+                            <li><i class="fa-solid fa-check"></i> Material Suggestions</li>
+                            <li><i class="fa-solid fa-check"></i> 2D Layout Plan</li>
+                            <li class="disabled"><i class="fa-solid fa-xmark"></i> Photorealistic 3D Renders</li>
+                            <li class="disabled"><i class="fa-solid fa-xmark"></i> Contractor Supervision</li>
+                        </ul>
+                        <a href="404.html" class="btn btn-secondary">Select Plan</a>
+                    </div>
+
+                    <div class="pricing-card premium-tier">
+                        <div class="pricing-badge">Recommended</div>
+                        <span class="pricing-name">Bespoke Design</span>
+                        <div class="pricing-price">$3,499<span> / room</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Dynamic Mood Boards</li>
+                            <li><i class="fa-solid fa-check"></i> Physical Material Box</li>
+                            <li><i class="fa-solid fa-check"></i> Laser Space Optimization</li>
+                            <li><i class="fa-solid fa-check"></i> Photorealistic 3D Renders</li>
+                            <li class="disabled"><i class="fa-solid fa-xmark"></i> Contractor Supervision</li>
+                        </ul>
+                        <a href="404.html" class="btn btn-primary">Select Plan</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <span class="pricing-name">Full Architectural</span>
+                        <div class="pricing-price">$8,999<span> / project</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Master Space Blueprint</li>
+                            <li><i class="fa-solid fa-check"></i> Custom Furniture Curation</li>
+                            <li><i class="fa-solid fa-check"></i> 4K 3D Visualization walkthrough</li>
+                            <li><i class="fa-solid fa-check"></i> Dedicated CAD Drafting</li>
+                            <li><i class="fa-solid fa-check"></i> Builder Coordination (8 weeks)</li>
+                        </ul>
+                        <a href="404.html" class="btn btn-secondary">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 6: Testimonials -->
+        <section class="testimonials-section" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Client Success</span>
+                    <h2 class="section-title">Trusted By Visionaries</h2>
+                </div>
+                <div class="testimonial-slider-container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="testimonial-slide active-slide">
+                        <p class="testimonial-quote" style="font-family: var(--font-heading); font-size: 1.6rem; font-style: italic; color: var(--accent); margin-bottom: 2rem; line-height: 1.4;">
+                            "The execution of our corporate headquarters exceeded all expectations. The attention to acoustic detailing and lighting has truly elevated our team's productivity."
+                        </p>
+                        <h4 style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Jonathan Hayes</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase;">CEO, Apex Group</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Case Studies / Before & After -->
+        <section class="case-studies-section" style="padding: 5rem 0; border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <span class="section-tag">Transformations</span>
+                    <h2 class="section-title">Case Studies</h2>
+                    <p class="section-desc" style="max-width: 600px; margin: 0 auto;">See how we reimagine spaces, taking them from conceptual potential to architectural mastery.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 4rem;">
+                    <!-- Case Study 1 -->
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); overflow: hidden;">
+                        <div style="position: relative; height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Completed Living Room" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; top: 1rem; right: 1rem; background: var(--accent); color: #000; padding: 0.3rem 0.8rem; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">After</div>
+                        </div>
+                        <div style="padding: 2rem;">
+                            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.5rem;">The Soho Loft</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">Converted an industrial warehouse into a warm, open-plan residential sanctuary featuring bespoke walnut joinery.</p>
+                            <a href="404.html" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">View Full Project <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 2 -->
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); overflow: hidden;">
+                        <div style="position: relative; height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Completed Office" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; top: 1rem; right: 1rem; background: var(--accent); color: #000; padding: 0.3rem 0.8rem; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">After</div>
+                        </div>
+                        <div style="padding: 2rem;">
+                            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.5rem;">Vanguard Corporate HQ</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">A complete interior overhaul designed to foster collaboration, featuring acoustic paneling and biophilic elements.</p>
+                            <a href="404.html" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">View Full Project <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 35px; width: auto; object-fit: contain;">
+                    </a>
+                    <p class="brand-desc">Creating bespoke, timeless interior spaces and architectural concepts that harmonize luxury and functionality.</p>
+                    <div class="social-links">
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Home</a></li>
+                        <li><a href="404.html">About</a></li>
+                        <li><a href="404.html">Services</a></li>
+                        <li><a href="404.html">Blog</a></li>
+                        <li><a href="404.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Residential Architecture</a></li>
+                        <li><a href="404.html">Commercial Interiors</a></li>
+                        <li><a href="404.html">Bespoke Furniture Curation</a></li>
+                        <li><a href="404.html">Space Optimization</a></li>
+                        <li><a href="404.html">3D Visualization</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col newsletter-col">
+                    <h3>Join Our Journal</h3>
+                    <p>Subscribe to receive architectural inspiration, design tips, and studio updates.</p>
+                    <form id="footer-newsletter-form" class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email Address" required aria-label="Email Address">
+                            <button type="submit" class="newsletter-btn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                        </div>
+                    </form>
+                    <div id="newsletter-toast" class="newsletter-toast">Subscribed successfully!</div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Studio. All Rights Reserved. Designed for elegance.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
