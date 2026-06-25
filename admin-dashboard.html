@@ -55,26 +55,32 @@
                         <i class="fa-solid fa-bars"></i>
                     </button>
                     <h2 class="mobile-only" style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Admin Overview</h2>
+                    <div class="search-input-wrapper desktop-only" style="position: relative; display: flex; align-items: center;">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1rem; color: var(--text-secondary); font-size: 0.9rem;"></i>
+                        <input type="text" placeholder="Search users, IDs, emails..." style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.6rem 1rem 0.6rem 2.5rem; border-radius: 20px; font-family: var(--font-primary); font-size: 0.85rem; width: 300px; outline: none;">
+                    </div>
                 </div>
                 <div class="dashboard-header-actions" style="display: flex; align-items: center; gap: 1.25rem;">
-                    <div class="icon-btn desktop-only" aria-label="Search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
                     <div class="icon-btn" aria-label="Notifications" style="position: relative;">
                         <i class="fa-regular fa-bell" style="font-size: 1.2rem;"></i>
                         <span class="badge" style="position: absolute; top: -2px; right: -2px; background: #ef4444; color: white; border-radius: 50%; width: 16px; height: 16px; font-size: 0.65rem; display: flex; justify-content: center; align-items: center; font-weight: bold; border: 2px solid var(--bg-secondary);">3</span>
                     </div>
-                    <button class="btn btn-primary desktop-only" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">
-                        <i class="fa-solid fa-plus"></i> New Project
+                    <button class="btn btn-primary desktop-only" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">
+                        <i class="fa-solid fa-plus"></i> NEW PROJECT
                     </button>
                 </div>
             </header>
 
             <!-- Panel: Overview -->
             <div id="panel-overview" class="dashboard-panel active">
+                
+                <div class="panel-header desktop-only" style="padding: 1.5rem 3rem; border-bottom: 1px solid var(--border-color); background-color: var(--bg-primary);">
+                    <h2 style="font-family: var(--font-primary); font-size: 1.75rem; font-weight: 700; color: var(--text-primary); margin: 0; letter-spacing: -0.5px;">Overview</h2>
+                    <p style="font-family: var(--font-primary); color: var(--text-secondary); font-size: 0.9rem; margin: 0.4rem 0 0 0;">Welcome back, here's what's happening today.</p>
+                </div>
 
             <!-- Dashboard Content -->
-            <div class="dashboard-content">
+            <div class="dashboard-content" style="padding-top: 2rem;">
                 
                 <!-- KPI Metrics -->
                 <div class="metrics-grid">

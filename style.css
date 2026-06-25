@@ -2045,11 +2045,13 @@ body.light-theme .login-card {
 .footer-links a {
     color: var(--text-secondary);
     font-size: 0.95rem;
+    display: inline-block;
+    transition: all var(--transition-fast);
 }
 
 .footer-links a:hover {
     color: var(--accent);
-    padding-left: 0.25rem;
+    transform: translateX(5px);
 }
 
 .newsletter-col p {
@@ -2114,6 +2116,10 @@ body.light-theme .login-card {
 .footer-bottom-links {
     display: flex;
     gap: 2rem;
+}
+
+.footer-bottom-links a {
+    transition: color var(--transition-fast);
 }
 
 .footer-bottom-links a:hover {

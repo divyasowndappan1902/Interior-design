@@ -55,16 +55,25 @@
                         <i class="fa-solid fa-bars"></i>
                     </button>
                     <h2 class="mobile-only" style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Client Portal</h2>
+                    <div class="search-input-wrapper desktop-only" style="position: relative; display: flex; align-items: center;">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1rem; color: var(--text-secondary); font-size: 0.9rem;"></i>
+                        <input type="text" placeholder="Search users, IDs, emails..." style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.6rem 1rem 0.6rem 2.5rem; border-radius: 20px; font-family: var(--font-primary); font-size: 0.85rem; width: 300px; outline: none;">
+                    </div>
                 </div>
                 <div class="dashboard-header-actions">
-                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">
-                        <i class="fa-solid fa-calendar-plus"></i> Book Meeting
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">
+                        <i class="fa-solid fa-calendar-plus"></i> BOOK MEETING
                     </button>
                 </div>
             </header>
 
+                <div class="panel-header desktop-only" style="padding: 1.5rem 3rem; border-bottom: 1px solid var(--border-color); background-color: var(--bg-primary);">
+                    <h2 style="font-family: var(--font-primary); font-size: 1.75rem; font-weight: 700; color: var(--text-primary); margin: 0; letter-spacing: -0.5px;">Overview</h2>
+                    <p style="font-family: var(--font-primary); color: var(--text-secondary); font-size: 0.9rem; margin: 0.4rem 0 0 0;">Welcome back, here's what's happening today.</p>
+                </div>
+
             <!-- Dashboard Content -->
-            <div class="dashboard-content">
+            <div class="dashboard-content" style="padding-top: 2rem;">
                 
                 <!-- Welcome Banner -->
                 <div class="dashboard-section" style="background: linear-gradient(135deg, rgba(197, 168, 128, 0.1) 0%, transparent 100%); border-color: rgba(197, 168, 128, 0.3);">
