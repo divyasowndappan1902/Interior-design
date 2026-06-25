@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="dark-theme dashboard-body">
     <div class="dashboard-wrapper fade-in-section">
@@ -93,7 +95,7 @@
                     <!-- Left Col -->
                     <div>
                         <!-- Recent Design Files -->
-                        <section class="dashboard-section">
+                        <section data-aos="fade-up" class="dashboard-section">
                             <div class="dashboard-section-header">
                                 <h3 class="dashboard-section-title">Latest Renderings</h3>
                                 <a href="404.html" style="color: var(--accent); font-size: 0.9rem;">View All Files</a>
@@ -125,7 +127,7 @@
                     <!-- Right Col -->
                     <div>
                         <!-- Next Meeting -->
-                        <section class="dashboard-section">
+                        <section data-aos="fade-up" class="dashboard-section">
                             <h3 class="dashboard-section-title" style="margin-bottom: 1.5rem;">Next Scheduled</h3>
                             
                             <div style="background-color: var(--bg-primary); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
@@ -425,5 +427,13 @@
     </div>
 
     <script src="app.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

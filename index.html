@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="dark-theme">
     <!-- Page Loader Animation -->
     <div id="loader" class="loader-container">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="loader-logo">
         <div class="loader-spinner"></div>
     </div>
 
@@ -50,7 +53,7 @@
     <!-- Main Content: Home Page Layout -->
     <main id="app-content" class="fade-in-section">
         <!-- Hero Image Slider -->
-        <section class="hero-slider-container">
+        <section data-aos="fade-up" class="hero-slider-container">
             <div class="hero-slide active" data-slide="0">
                 <div class="hero-slide-bg" style="background-image: url('assets/hero_living.webp')"></div>
                 <div class="hero-slide-overlay"></div>
@@ -114,7 +117,7 @@
         </section>
 
         <!-- Studio Introduction Summary -->
-        <section class="home-intro">
+        <section data-aos="fade-up" class="home-intro">
             <div class="container">
                 <div class="intro-grid">
                     <div class="intro-image-container">
@@ -154,7 +157,7 @@
         </section>
 
         <!-- Signature Aesthetics Section -->
-        <section class="home-intro" style="background-color: var(--bg-primary); padding: 4rem 0;">
+        <section data-aos="fade-up" class="home-intro" style="background-color: var(--bg-primary); padding: 4rem 0;">
             <div class="container">
                 <div class="intro-grid" style="grid-template-columns: 1.2fr 1fr; gap: 4rem;">
                     <div class="intro-text-container" style="display: flex; flex-direction: column; justify-content: center;">
@@ -180,7 +183,7 @@
         </section>
 
         <!-- Filterable Projects Gallery -->
-        <section class="projects-gallery">
+        <section data-aos="fade-up" class="projects-gallery">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Portfolio</span>
@@ -251,7 +254,7 @@
         </section>
 
         <!-- Testimonial Section -->
-        <section class="home-intro" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="home-intro" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Client Voices</span>
@@ -271,7 +274,7 @@
         </section>
 
         <!-- 5. Services Overview Section -->
-        <section class="services-overview" style="padding: 5rem 0;">
+        <section data-aos="fade-up" class="services-overview" style="padding: 5rem 0;">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
                     <span class="section-tag">Expertise</span>
@@ -298,7 +301,7 @@
         </section>
 
         <!-- 6. Design Process Section -->
-        <section class="design-process" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="design-process" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Methodology</span>
@@ -331,7 +334,7 @@
         </section>
 
         <!-- 7. Meet the Experts Section -->
-        <section class="meet-experts" style="padding: 5rem 0;">
+        <section data-aos="fade-up" class="meet-experts" style="padding: 5rem 0;">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
                     <span class="section-tag">Our Team</span>
@@ -358,7 +361,7 @@
         </section>
 
         <!-- 8. Awards Section -->
-        <section class="awards-section" style="background-color: var(--bg-secondary); padding: 4rem 0; border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="awards-section" style="background-color: var(--bg-secondary); padding: 4rem 0; border-top: 1px solid var(--border-color);">
             <div class="container" style="text-align: center;">
                 <p style="color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 2rem;">Recognized By</p>
                 <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: 0.6;">
@@ -371,7 +374,7 @@
         </section>
 
         <!-- 9. Call to Action Section -->
-        <section class="cta-section" style="padding: 6rem 0; background: linear-gradient(rgba(10, 10, 12, 0.8), rgba(10, 10, 12, 0.9)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center / cover fixed;">
+        <section data-aos="fade-up" class="cta-section" style="padding: 6rem 0; background: linear-gradient(rgba(10, 10, 12, 0.8), rgba(10, 10, 12, 0.9)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center / cover fixed;">
             <div class="container" style="text-align: center;">
                 <h2 style="font-family: var(--font-heading); font-size: 3.5rem; color: #fff; margin-bottom: 1.5rem;">Ready to Transform Your Space?</h2>
                 <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.2rem; max-width: 600px; margin: 0 auto 3rem auto; line-height: 1.6;">Schedule a private consultation with our lead architects and begin the journey to your dream interior.</p>
@@ -402,11 +405,11 @@
                 <div class="footer-col links-col">
                     <h3>Explore</h3>
                     <ul class="footer-links">
-                        <li><a href="404.html">Home</a></li>
-                        <li><a href="404.html">About</a></li>
-                        <li><a href="404.html">Services</a></li>
-                        <li><a href="404.html">Blog</a></li>
-                        <li><a href="404.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -449,5 +452,13 @@
 
     <!-- App Script -->
     <script src="app.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

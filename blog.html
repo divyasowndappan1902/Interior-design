@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="dark-theme">
     <!-- Page Loader Animation -->
     <div id="loader" class="loader-container">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="loader-logo">
         <div class="loader-spinner"></div>
     </div>
 
@@ -51,7 +54,7 @@
     <!-- Main Content: Blog Page Layout -->
     <main id="app-content" class="fade-in-section">
         <!-- Subpage Hero Banner -->
-        <section class="page-hero">
+        <section data-aos="fade-up" class="page-hero">
             <div class="page-hero-overlay"></div>
             <div class="container">
                 <span class="page-hero-tag">Design Journal</span>
@@ -63,7 +66,7 @@
         </section>
 
         <!-- Section 2: Featured Article -->
-        <section class="featured-post-section" style="padding-top: 5rem;">
+        <section data-aos="fade-up" class="featured-post-section" style="padding-top: 5rem;">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Highlight</span>
@@ -84,7 +87,7 @@
         </section>
 
         <!-- Section 3: Categories Filter -->
-        <section class="categories-section" style="padding: 4rem 0;">
+        <section data-aos="fade-up" class="categories-section" style="padding: 4rem 0;">
             <div class="container">
                 <div class="filter-tabs" style="justify-content: center; margin-bottom: 0;">
                     <button class="filter-tab active" data-filter="all">All Topics</button>
@@ -97,10 +100,10 @@
         </section>
 
         <!-- Section 4: Blog Masonry Grid -->
-        <section class="blog-section" style="padding-top: 0;">
+        <section data-aos="fade-up" class="blog-section" style="padding-top: 0;">
             <div class="container">
                 <div class="blog-grid">
-                    <div class="blog-card" data-id="natural-materials">
+                    <div class="blog-card" data-id="natural-materials" data-category="materials">
                         <div class="blog-card-image-box">
                             <img src="assets/project_res1.webp" alt="Natural Materials & Brass Accent Trends" class="blog-card-image">
                         </div>
@@ -115,7 +118,7 @@
                         </div>
                     </div>
 
-                    <div class="blog-card" data-id="minimalist-philosophy">
+                    <div class="blog-card" data-id="minimalist-philosophy" data-category="interiors">
                         <div class="blog-card-image-box">
                             <img src="assets/hero_kitchen.webp" alt="The Narrative of Minimalist Luxury" class="blog-card-image">
                         </div>
@@ -130,7 +133,7 @@
                         </div>
                     </div>
 
-                    <div class="blog-card" data-id="workplace-evolution">
+                    <div class="blog-card" data-id="workplace-evolution" data-category="architecture">
                         <div class="blog-card-image-box">
                             <img src="assets/hero_office.webp" alt="Biophilia in the Executive Workspace" class="blog-card-image">
                         </div>
@@ -144,12 +147,27 @@
                             <span class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right-long"></i></span>
                         </div>
                     </div>
+
+                    <div class="blog-card" data-id="lighting-mastery" data-category="trends">
+                        <div class="blog-card-image-box">
+                            <img src="assets/blog_living.webp" alt="Mastering Ambient Lighting" class="blog-card-image">
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> August 12, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> By Marcus Vance</span>
+                            </div>
+                            <h2 class="blog-card-title">Mastering Ambient Lighting</h2>
+                            <p class="blog-card-excerpt">Discover how layering warm, indirect light sources can transform a modern living space into an inviting, luxurious sanctuary.</p>
+                            <span class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 5: Newsletter Subscription -->
-        <section class="newsletter-section" style="background-color: var(--bg-secondary); padding: 5rem 0;">
+        <section data-aos="fade-up" class="newsletter-section" style="background-color: var(--bg-secondary); padding: 5rem 0;">
             <div class="container">
                 <div style="max-width: 600px; margin: 0 auto; text-align: center;">
                     <i class="fa-regular fa-envelope-open" style="font-size: 3rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
@@ -166,25 +184,25 @@
         </section>
 
         <!-- Section 6: Popular Tags -->
-        <section class="tags-section" style="padding: 5rem 0; border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="tags-section" style="padding: 5rem 0; border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
                     <h2 class="section-title" style="font-size: 1.8rem;">Explore by Tag</h2>
                 </div>
                 <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 800px; margin: 0 auto;">
-                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Minimalism</span>
-                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Biophilia</span>
-                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Brutalism</span>
-                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Marble</span>
-                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Lighting</span>
-                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Commercial</span>
-                    <span class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast);">#Renovation</span>
+                    <a href="404.html" class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast); display: inline-block;">#Minimalism</a>
+                    <a href="404.html" class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast); display: inline-block;">#Biophilia</a>
+                    <a href="404.html" class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast); display: inline-block;">#Brutalism</a>
+                    <a href="404.html" class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast); display: inline-block;">#Marble</a>
+                    <a href="404.html" class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast); display: inline-block;">#Lighting</a>
+                    <a href="404.html" class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast); display: inline-block;">#Commercial</a>
+                    <a href="404.html" class="project-tag" style="position: static; font-size: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--border-color); cursor: pointer; transition: all var(--transition-fast); display: inline-block;">#Renovation</a>
                 </div>
             </div>
         </section>
 
         <!-- Section 7: Call to Action -->
-        <section class="about-cta" id="blog-cta" style="border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="about-cta" id="blog-cta" style="border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div class="about-cta-inner">
                     <span class="section-tag">Inspired?</span>
@@ -219,11 +237,11 @@
                 <div class="footer-col links-col">
                     <h3>Explore</h3>
                     <ul class="footer-links">
-                        <li><a href="404.html">Home</a></li>
-                        <li><a href="404.html">About</a></li>
-                        <li><a href="404.html">Services</a></li>
-                        <li><a href="404.html">Blog</a></li>
-                        <li><a href="404.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -263,5 +281,13 @@
 
     <!-- App Script -->
     <script src="app.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

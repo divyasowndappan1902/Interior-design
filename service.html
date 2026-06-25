@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="dark-theme">
     <!-- Page Loader Animation -->
     <div id="loader" class="loader-container">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="loader-logo">
         <div class="loader-spinner"></div>
     </div>
 
@@ -51,7 +54,7 @@
     <!-- Main Content: Services Page Layout -->
     <main id="app-content" class="fade-in-section">
         <!-- Subpage Hero Banner -->
-        <section class="page-hero">
+        <section data-aos="fade-up" class="page-hero">
             <div class="page-hero-overlay"></div>
             <div class="container">
                 <span class="page-hero-tag">Our Expertise</span>
@@ -63,7 +66,7 @@
         </section>
 
         <!-- Section 2: Services Cards List -->
-        <section class="services-section">
+        <section data-aos="fade-up" class="services-section">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Our Capabilities</span>
@@ -108,7 +111,7 @@
         </section>
 
         <!-- Section 3: Design Process -->
-        <section class="process-section" style="background-color: var(--bg-secondary); padding: 5rem 0;">
+        <section data-aos="fade-up" class="process-section" style="background-color: var(--bg-secondary); padding: 5rem 0;">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">How We Work</span>
@@ -135,7 +138,7 @@
         </section>
 
         <!-- Section 4: Custom Interactive Accordion for FAQs -->
-        <section class="faq-section" style="padding: 5rem 0;">
+        <section data-aos="fade-up" class="faq-section" style="padding: 5rem 0;">
             <div class="container">
                 <div class="intro-grid" style="align-items: start;">
                     <div>
@@ -180,7 +183,7 @@
         </section>
 
         <!-- Section 5: Flat-Rate Design Tiers Pricing Grid -->
-        <section class="pricing-section" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="pricing-section" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Investment</span>
@@ -231,7 +234,7 @@
         </section>
         
         <!-- Section 6: Testimonials -->
-        <section class="testimonials-section" style="padding: 5rem 0;">
+        <section data-aos="fade-up" class="testimonials-section" style="padding: 5rem 0;">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Client Success</span>
@@ -250,7 +253,7 @@
         </section>
 
         <!-- 7. Case Studies / Before & After -->
-        <section class="case-studies-section" style="padding: 5rem 0; border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="case-studies-section" style="padding: 5rem 0; border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
                     <span class="section-tag">Transformations</span>
@@ -308,11 +311,11 @@
                 <div class="footer-col links-col">
                     <h3>Explore</h3>
                     <ul class="footer-links">
-                        <li><a href="404.html">Home</a></li>
-                        <li><a href="404.html">About</a></li>
-                        <li><a href="404.html">Services</a></li>
-                        <li><a href="404.html">Blog</a></li>
-                        <li><a href="404.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -352,5 +355,13 @@
 
     <!-- App Script -->
     <script src="app.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="dark-theme dashboard-body">
     <div class="dashboard-wrapper fade-in-section">
@@ -22,9 +24,6 @@
                 <a href="index.html" class="logo" style="margin-bottom: 0;">
                     <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
                 </a>
-                <button id="sidebar-toggle-btn" aria-label="Toggle Sidebar" style="color: var(--text-primary); border: none; background: transparent; cursor: pointer; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; padding: 0.5rem; outline: none;">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
             </div>
             <nav class="sidebar-nav">
                 <a href="404.html" class="sidebar-link active" data-panel="panel-overview"><i class="fa-solid fa-chart-pie"></i> Overview</a>
@@ -52,9 +51,6 @@
             <!-- Header -->
             <header class="dashboard-header">
                 <div class="dashboard-header-title" style="display: flex; align-items: center; gap: 1rem;">
-                    <button id="mobile-sidebar-toggle-btn" class="mobile-only" aria-label="Toggle Sidebar" style="border: none; background: transparent; cursor: pointer; font-size: 1.5rem; color: var(--text-primary); padding: 0 0.5rem 0 0; display: flex; align-items: center; justify-content: center; outline: none;">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
                     <h2 class="mobile-only" style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Admin Overview</h2>
                 </div>
                 <div class="dashboard-header-actions" style="display: flex; align-items: center; gap: 1.25rem;">
@@ -103,7 +99,7 @@
                 </div>
 
                 <!-- Recent Consultations Table -->
-                <section class="dashboard-section">
+                <section data-aos="fade-up" class="dashboard-section">
                     <div class="dashboard-section-header">
                         <h3 class="dashboard-section-title">Recent Inquiries</h3>
                         <a href="404.html" style="color: var(--accent); font-size: 0.9rem;">View All</a>
@@ -140,7 +136,7 @@
                 </section>
 
                 <!-- Project Timeline -->
-                <section class="dashboard-section">
+                <section data-aos="fade-up" class="dashboard-section">
                     <div class="dashboard-section-header">
                         <h3 class="dashboard-section-title">Project Timeline</h3>
                         <div class="icon-btn"><i class="fa-solid fa-filter"></i></div>
@@ -774,5 +770,13 @@
     </div>
 
     <script src="app.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

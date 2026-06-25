@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="dark-theme">
     <!-- Page Loader Animation -->
     <div id="loader" class="loader-container">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="loader-logo">
         <div class="loader-spinner"></div>
     </div>
 
@@ -52,7 +55,7 @@
     <!-- Main Content: About Page Layout -->
     <main id="app-content" class="fade-in-section">
         <!-- Subpage Hero Banner -->
-        <section class="page-hero">
+        <section data-aos="fade-up" class="page-hero">
             <div class="page-hero-overlay"></div>
             <div class="container">
                 <span class="page-hero-tag">Our Studio</span>
@@ -64,7 +67,7 @@
         </section>
 
         <!-- Studio Philosophy Section -->
-        <section class="about-philosophy">
+        <section data-aos="fade-up" class="about-philosophy">
             <div class="container">
                 <div class="philosophy-grid">
                     <img src="assets/hero_office.webp" alt="Architecture workspace detailing" class="philosophy-image">
@@ -107,7 +110,7 @@
         </section>
 
         <!-- Board Members Gallery -->
-        <section class="projects-gallery" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="projects-gallery" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Creative Minds</span>
@@ -147,7 +150,7 @@
         </section>
 
         <!-- 4. Studio History / Timeline -->
-        <section class="studio-history" style="padding: 5rem 0;">
+        <section data-aos="fade-up" class="studio-history" style="padding: 5rem 0;">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
                     <span class="section-tag">Our Legacy</span>
@@ -174,7 +177,7 @@
         </section>
 
         <!-- 5. Core Values Section -->
-        <section class="core-values" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="core-values" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
                     <span class="section-tag">Philosophy</span>
@@ -201,7 +204,7 @@
         </section>
 
         <!-- 6. Awards & Recognition Section -->
-        <section class="awards-section" style="padding: 5rem 0;">
+        <section data-aos="fade-up" class="awards-section" style="padding: 5rem 0;">
             <div class="container" style="text-align: center;">
                 <div class="section-header">
                     <span class="section-tag">Excellence</span>
@@ -228,7 +231,7 @@
         </section>
 
         <!-- 7. Testimonials Section -->
-        <section class="testimonials-section" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
+        <section data-aos="fade-up" class="testimonials-section" style="background-color: var(--bg-secondary); padding: 5rem 0; border-top: 1px solid var(--border-color);">
             <div class="container" style="text-align: center;">
                 <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 2rem;">"Stackly redefines the boundaries of modern architecture and interior elegance."</h2>
                 <p style="color: var(--accent); font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">— The Design Review Quarterly</p>
@@ -255,11 +258,11 @@
                 <div class="footer-col links-col">
                     <h3>Explore</h3>
                     <ul class="footer-links">
-                        <li><a href="404.html">Home</a></li>
-                        <li><a href="404.html">About</a></li>
-                        <li><a href="404.html">Services</a></li>
-                        <li><a href="404.html">Blog</a></li>
-                        <li><a href="404.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -299,5 +302,13 @@
 
     <!-- App Script -->
     <script src="app.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

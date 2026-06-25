@@ -80,7 +80,7 @@ function initApp() {
     if (document.querySelector('.hero-slider-container')) {
         initHomeSlider();
     }
-    if (document.getElementById('gallery-grid')) {
+    if (document.querySelector('.filter-tab')) {
         initProjectGallery();
     }
     if (document.querySelector('.accordion-container')) {
@@ -285,7 +285,7 @@ function initHomeSlider() {
 // --- Home Gallery Filtering ---
 function initProjectGallery() {
     const filterTabs = document.querySelectorAll('.filter-tab');
-    const cards = document.querySelectorAll('.project-card');
+    const cards = document.querySelectorAll('.project-card, .blog-card');
 
     if (filterTabs.length === 0) return;
 
@@ -592,17 +592,13 @@ function initLoginForm() {
 
             if (isValid) {
                 if (toast && toastTitle && toastDesc) {
-                    const roleInput = document.querySelector('input[name="reg_role"]:checked');
-                    const selectedRole = roleInput ? roleInput.value : 'customer';
-                    const destination = selectedRole === 'admin' ? 'admin-dashboard.html' : 'customer-dashboard.html';
-
                     toastTitle.textContent = 'Account Created';
-                    toastDesc.textContent = 'Preparing your dashboard...';
+                    toastDesc.textContent = 'Redirecting to sign in page...';
                     toast.classList.add('active');
                     localStorage.setItem('userEmail', email.value);
                     setTimeout(() => {
                         toast.classList.remove('active');
-                        window.location.href = destination;
+                        window.location.href = 'login.html';
                     }, 2500);
                 }
                 registerForm.reset();
