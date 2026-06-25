@@ -478,6 +478,10 @@ body.light-theme .theme-toggle-btn .moon-icon {
     width: 24px;
     height: 18px;
     z-index: 1010;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .burger-menu .bar {
@@ -502,7 +506,7 @@ body.light-theme .theme-toggle-btn .moon-icon {
         box-shadow: var(--shadow-lg);
         transition: right var(--transition-smooth);
         border-left: 1px solid var(--border-color);
-        z-index: 999;
+        z-index: 1005;
     }
     
     .nav-menu.active {
