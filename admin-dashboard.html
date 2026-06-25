@@ -20,17 +20,16 @@
         
         <!-- Sidebar Navigation -->
         <aside class="dashboard-sidebar">
-            <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+            <div class="sidebar-header">
                 <a href="index.html" class="logo" style="margin-bottom: 0;">
                     <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 40px; width: auto; object-fit: contain;">
                 </a>
             </div>
             <nav class="sidebar-nav">
-                <a href="404.html" class="sidebar-link active" data-panel="panel-overview"><i class="fa-solid fa-chart-pie"></i> Overview</a>
-                <a href="404.html" class="sidebar-link" data-panel="panel-projects"><i class="fa-solid fa-layer-group"></i> Projects</a>
-                <a href="404.html" class="sidebar-link" data-panel="panel-clients"><i class="fa-solid fa-users"></i> Clients</a>
-                <a href="404.html" class="sidebar-link" data-panel="panel-finances"><i class="fa-solid fa-file-invoice-dollar"></i> Finances</a>
-                <a href="404.html" class="sidebar-link" data-panel="panel-users"><i class="fa-solid fa-user-shield"></i> User Management</a>
+                <a href="404.html" class="sidebar-link active" data-panel="panel-overview"><i class="fa-solid fa-border-all"></i> Overview</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-projects"><i class="fa-solid fa-image"></i> Exhibitions</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-clients"><i class="fa-solid fa-box-archive"></i> Collection</a>
+                <a href="404.html" class="sidebar-link" data-panel="panel-users"><i class="fa-solid fa-user-group"></i> Members</a>
                 <a href="404.html" class="sidebar-link" data-panel="panel-settings"><i class="fa-solid fa-gear"></i> Settings</a>
             </nav>
 
@@ -49,35 +48,26 @@
         <!-- Main Content Area -->
         <main class="dashboard-main">
             <!-- Header -->
-            <header class="dashboard-header">
+            <header class="dashboard-header" style="background-color: var(--bg-primary);">
                 <div class="dashboard-header-title" style="display: flex; align-items: center; gap: 1rem;">
                     <button id="mobile-sidebar-toggle-btn" class="mobile-only" aria-label="Toggle Sidebar" style="border: none; background: transparent; cursor: pointer; font-size: 1.5rem; color: var(--text-primary); padding: 0 0.5rem 0 0; display: flex; align-items: center; justify-content: center; outline: none;">
                         <i class="fa-solid fa-bars"></i>
                     </button>
-                    <h2 class="mobile-only" style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Admin Overview</h2>
-                    <div class="search-input-wrapper desktop-only" style="position: relative; display: flex; align-items: center;">
-                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1rem; color: var(--text-secondary); font-size: 0.9rem;"></i>
-                        <input type="text" placeholder="Search users, IDs, emails..." style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.6rem 1rem 0.6rem 2.5rem; border-radius: 20px; font-family: var(--font-primary); font-size: 0.85rem; width: 300px; outline: none;">
-                    </div>
+                    <h1 class="desktop-only" style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 700; color: var(--text-primary); margin: 0; letter-spacing: -0.5px;">Exhibitions</h1>
+                    <h2 class="mobile-only" style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Exhibitions</h2>
                 </div>
                 <div class="dashboard-header-actions" style="display: flex; align-items: center; gap: 1.25rem;">
-                    <div class="icon-btn" aria-label="Notifications" style="position: relative;">
-                        <i class="fa-regular fa-bell" style="font-size: 1.2rem;"></i>
-                        <span class="badge" style="position: absolute; top: -2px; right: -2px; background: #ef4444; color: white; border-radius: 50%; width: 16px; height: 16px; font-size: 0.65rem; display: flex; justify-content: center; align-items: center; font-weight: bold; border: 2px solid var(--bg-secondary);">3</span>
+                    <div class="icon-btn" aria-label="Notifications" style="position: relative; width: 40px; height: 40px;">
+                        <i class="fa-regular fa-bell" style="font-size: 1.1rem;"></i>
                     </div>
-                    <button class="btn btn-primary desktop-only" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">
-                        <i class="fa-solid fa-plus"></i> NEW PROJECT
+                    <button class="btn btn-primary desktop-only" style="padding: 0.75rem 1.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">
+                        + NEW EXHIBITION
                     </button>
                 </div>
             </header>
 
             <!-- Panel: Overview -->
             <div id="panel-overview" class="dashboard-panel active">
-                
-                <div class="panel-header desktop-only" style="padding: 1.5rem 3rem; border-bottom: 1px solid var(--border-color); background-color: var(--bg-primary);">
-                    <h2 style="font-family: var(--font-primary); font-size: 1.75rem; font-weight: 700; color: var(--text-primary); margin: 0; letter-spacing: -0.5px;">Overview</h2>
-                    <p style="font-family: var(--font-primary); color: var(--text-secondary); font-size: 0.9rem; margin: 0.4rem 0 0 0;">Welcome back, here's what's happening today.</p>
-                </div>
 
             <!-- Dashboard Content -->
             <div class="dashboard-content" style="padding-top: 2rem;">
@@ -85,114 +75,86 @@
                 <!-- KPI Metrics -->
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <div class="metric-icon"><i class="fa-solid fa-building"></i></div>
-                        <div class="metric-info">
-                            <p>Active Projects</p>
-                            <h3>12</h3>
+                        <div class="metric-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 500; margin: 0;">Today's Visitors</p>
+                            <div class="metric-icon-sm" style="background-color: rgba(197, 168, 128, 0.05); color: var(--accent); padding: 0.4rem; border-radius: 6px; border: 1px solid rgba(197, 168, 128, 0.1);"><i class="fa-solid fa-users" style="font-size: 0.9rem;"></i></div>
                         </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 600; margin: 0 0 1rem 0;">4,821</h3>
+                        <span class="trend-up" style="color: var(--accent-success); font-size: 0.8rem; font-weight: 500;"><i class="fa-solid fa-arrow-up"></i> +12.5% from yesterday</span>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-icon"><i class="fa-solid fa-sack-dollar"></i></div>
-                        <div class="metric-info">
-                            <p>Monthly Revenue</p>
-                            <h3>$184k</h3>
+                        <div class="metric-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 500; margin: 0;">Active Exhibitions</p>
+                            <div class="metric-icon-sm" style="background-color: rgba(197, 168, 128, 0.05); color: var(--accent); padding: 0.4rem; border-radius: 6px; border: 1px solid rgba(197, 168, 128, 0.1);"><i class="fa-solid fa-image" style="font-size: 0.9rem;"></i></div>
                         </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 600; margin: 0 0 1rem 0;">6</h3>
+                        <span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">&mdash; 2 ending this week</span>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-icon"><i class="fa-solid fa-calendar-check"></i></div>
-                        <div class="metric-info">
-                            <p>Pending Consults</p>
-                            <h3>5</h3>
+                        <div class="metric-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 500; margin: 0;">Ticket Revenue (WTD)</p>
+                            <div class="metric-icon-sm" style="background-color: rgba(197, 168, 128, 0.05); color: var(--accent); padding: 0.4rem; border-radius: 6px; border: 1px solid rgba(197, 168, 128, 0.1);"><i class="fa-solid fa-dollar-sign" style="font-size: 0.9rem;"></i></div>
                         </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 600; margin: 0 0 1rem 0;">$142,500</h3>
+                        <span class="trend-up" style="color: var(--accent-success); font-size: 0.8rem; font-weight: 500;"><i class="fa-solid fa-arrow-up"></i> +5.2% vs last week</span>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 500; margin: 0;">New Members</p>
+                            <div class="metric-icon-sm" style="background-color: rgba(197, 168, 128, 0.05); color: var(--accent); padding: 0.4rem; border-radius: 6px; border: 1px solid rgba(197, 168, 128, 0.1);"><i class="fa-solid fa-star" style="font-size: 0.9rem;"></i></div>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 600; margin: 0 0 1rem 0;">128</h3>
+                        <span class="trend-up" style="color: var(--accent-success); font-size: 0.8rem; font-weight: 500;"><i class="fa-solid fa-arrow-up"></i> +18% this month</span>
                     </div>
                 </div>
 
-                <!-- Recent Consultations Table -->
-                <section data-aos="fade-up" class="dashboard-section">
-                    <div class="dashboard-section-header">
-                        <h3 class="dashboard-section-title">Recent Inquiries</h3>
-                        <a href="404.html" style="color: var(--accent); font-size: 0.9rem;">View All</a>
-                    </div>
-                    <div style="overflow-x: auto;">
-                        <table class="data-table">
+                <!-- Split Layout: Table & Widgets -->
+                <div class="dashboard-panel-card" style="margin-top: 2rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin: 0 0 1.5rem 0; color: var(--text-primary);">Current Exhibitions Status</h3>
+                    <div class="modern-table-wrapper">
+                        <table class="modern-table">
                             <thead>
                                 <tr>
-                                    <th>Client Name</th>
-                                    <th>Service Type</th>
-                                    <th>Date Received</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
+                                    <th>EXHIBITION NAME</th>
+                                    <th>LOCATION</th>
+                                    <th>END DATE</th>
+                                    <th>STATUS</th>
+                                    <th style="text-align: right;">ACTIONS</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Sarah Jenkins</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">sarah.j@email.com</span></td>
-                                    <td>Residential Architecture</td>
-                                    <td>Today, 10:45 AM</td>
-                                    <td><span class="status-badge status-pending">Needs Review</span></td>
-                                    <td><button class="icon-btn" style="width: 35px; height: 35px;"><i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i></button></td>
+                                    <td><span style="font-weight: 600; color: var(--text-primary);">The Modern Era</span></td>
+                                    <td>Main Gallery</td>
+                                    <td><span style="color: var(--text-secondary);">Oct 24, 2024</span></td>
+                                    <td><span class="status-badge success">Active</span></td>
+                                    <td style="text-align: right;"><button class="icon-btn" style="border: none; background: transparent; cursor: pointer; color: var(--text-secondary);"><i class="fa-solid fa-ellipsis"></i></button></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Michael Chang</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">m.chang@corporate.com</span></td>
-                                    <td>Commercial Interior</td>
-                                    <td>Yesterday, 2:15 PM</td>
-                                    <td><span class="status-badge status-active">Contacted</span></td>
-                                    <td><button class="icon-btn" style="width: 35px; height: 35px;"><i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i></button></td>
+                                    <td><span style="font-weight: 600; color: var(--text-primary);">Classic Antiquities</span></td>
+                                    <td>West Wing</td>
+                                    <td><span style="color: var(--text-secondary);">Nov 15, 2024</span></td>
+                                    <td><span class="status-badge warning">Pending Setup</span></td>
+                                    <td style="text-align: right;"><button class="icon-btn" style="border: none; background: transparent; cursor: pointer; color: var(--text-secondary);"><i class="fa-solid fa-ellipsis"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 600; color: var(--text-primary);">Contemporary Voices</span></td>
+                                    <td>East Wing</td>
+                                    <td><span style="color: var(--text-secondary);">Dec 01, 2024</span></td>
+                                    <td><span class="status-badge" style="background-color: rgba(255,255,255,0.05); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600;">Draft</span></td>
+                                    <td style="text-align: right;"><button class="icon-btn" style="border: none; background: transparent; cursor: pointer; color: var(--text-secondary);"><i class="fa-solid fa-ellipsis"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 600; color: var(--text-primary);">Digital Horizons</span></td>
+                                    <td>Gallery B</td>
+                                    <td><span style="color: var(--text-secondary);">Jan 12, 2025</span></td>
+                                    <td><span class="status-badge" style="background-color: rgba(59,130,246,0.1); color: #60a5fa; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600;">Planning</span></td>
+                                    <td style="text-align: right;"><button class="icon-btn" style="border: none; background: transparent; cursor: pointer; color: var(--text-secondary);"><i class="fa-solid fa-ellipsis"></i></button></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </section>
-
-                <!-- Project Timeline -->
-                <section data-aos="fade-up" class="dashboard-section">
-                    <div class="dashboard-section-header">
-                        <h3 class="dashboard-section-title">Project Timeline</h3>
-                        <div class="icon-btn"><i class="fa-solid fa-filter"></i></div>
-                    </div>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 2rem;">
-                        <!-- Project 1 -->
-                        <div>
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <div>
-                                    <h4 style="font-size: 1.1rem; color: var(--text-primary);">Obsidian Living Space</h4>
-                                    <p style="font-size: 0.85rem; color: var(--text-muted);">Client: Emily Robertson</p>
-                                </div>
-                                <span class="status-badge status-active">Rendering Phase</span>
-                            </div>
-                            <div class="progress-bar-bg" style="height: 6px; margin-bottom: 0.5rem;">
-                                <div class="progress-bar-fill" style="width: 65%;"></div>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
-                                <span>Concept</span>
-                                <span>Renders</span>
-                                <span>Procurement</span>
-                                <span>Build</span>
-                            </div>
-                        </div>
-
-                        <!-- Project 2 -->
-                        <div>
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <div>
-                                    <h4 style="font-size: 1.1rem; color: var(--text-primary);">Biophilic Office Lounge</h4>
-                                    <p style="font-size: 0.85rem; color: var(--text-muted);">Client: Nexus Corp</p>
-                                </div>
-                                <span class="status-badge status-pending">Procurement</span>
-                            </div>
-                            <div class="progress-bar-bg" style="height: 6px; margin-bottom: 0.5rem;">
-                                <div class="progress-bar-fill" style="width: 85%;"></div>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
-                                <span>Concept</span>
-                                <span>Renders</span>
-                                <span style="color: var(--accent);">Procurement</span>
-                                <span>Build</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
 
             </div>
             </div>
